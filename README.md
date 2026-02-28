@@ -1,6 +1,6 @@
 # CSE284 Final Project
 
-[Xueqian Bai](https://hakuna25.github.io/), Jialin Wu, Yutong Liang
+[Xueqian Bai](https://hakuna25.github.io/), [Jialin Wu](https://jlwu.cn/), [Yutong Liang](https://www.lyt0112.com/)
 
 ## Introduction
 Briefly describe the project here...
