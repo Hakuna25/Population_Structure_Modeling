@@ -1,47 +1,52 @@
 #!/bin/bash
 
 # --- Setup ---
-mkdir -p dump/admixture
-vcf_files='phase3_vcf_files.txt'
-sample_info='1000Genomes/igsr_samples.tsv'
-PREFIX='admixture'
+CONFIG_FILE="${PIPELINE_CONFIG:-pipeline.conf}"
+if [[ -f "$CONFIG_FILE" ]]; then
+    # shellcheck disable=SC1090
+    source "$CONFIG_FILE"
+fi
 
-readarray -t vcfs < "$vcf_files"
+OUT_DIR="dump/admixture"
+mkdir -p "$OUT_DIR"
+sample_info="${SAMPLE_INFO:-1000Genomes/igsr_samples.tsv}"
+PREFIX="${PREFIX:-${ADMIXTURE_PREFIX:-admixture}}"
+KLIST="${KLIST:-2 3 4 5 6 7 8 9 10}"
+THREADS="${THREADS:-10}"
+BENCHMARK_ENABLED="${BENCHMARK_ENABLED:-1}"
+METRICS_FILE="${METRICS_FILE:-$OUT_DIR/metrics.tsv}"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# 1. Extract samples
-cat "$sample_info" | grep "1000 Genomes phase 3 release" | awk '{print $1 "\t" $1}' > ${PREFIX}_samples.txt
+# shellcheck disable=SC1091
+source "$SCRIPT_DIR/benchmark.sh"
 
-# 2. Process Chromosomes (Uncomment the loop below to run preprocessing)
-# for vcf in "${vcfs[@]}"; do
-#     file_raw=$(basename "$vcf" .vcf.gz)
-#     chr_number=$(echo "$file_raw" | sed 's/.*chr\([0-9]\+\).*/\1/')
-#     
-#     plink --vcf "$vcf" --maf 0.01 --keep ${PREFIX}_samples.txt --double-id --make-bed --out ./dump/${PREFIX}_chr${chr_number}
-#     plink --bfile ./dump/${PREFIX}_chr${chr_number} --indep-pairwise 50 10 0.1
-#     plink --bfile ./dump/${PREFIX}_chr${chr_number} --extract plink.prune.in --make-bed --out ./dump/${PREFIX}_chr${chr_number}.pruned
-# done
+if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
+    init_metrics_file "$METRICS_FILE"
+fi
 
-# 3. Merge Files
-echo "Creating merge list..."
-rm -f admixture_filenames.txt
-for i in $(seq 2 22); do
-    echo "dump/${PREFIX}_chr${i}.pruned" >> admixture_filenames.txt
-done
-
-plink --bfile dump/${PREFIX}_chr1.pruned --merge-list admixture_filenames.txt --make-bed --out ./dump/${PREFIX}_ALL.pruned
+#  Preprocess
+if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
+    benchmark_run "$METRICS_FILE" "admixture" "preprocess" "NA" "$OUT_DIR/preprocess.log" \
+        bash "$SCRIPT_DIR/preprocess.sh" --out-dir "$OUT_DIR" --prefix "$PREFIX" --sample-info "$sample_info" --chr-start "${CHR_START:-1}" --chr-end "${CHR_END:-22}"
+else
+    bash "$SCRIPT_DIR/preprocess.sh" --out-dir "$OUT_DIR" --prefix "$PREFIX" --sample-info "$sample_info" --chr-start "${CHR_START:-1}" --chr-end "${CHR_END:-22}"
+fi
 
 # 4. Run ADMIXTURE
-pushd dump/admixture >/dev/null
-# Copy the merged bed/bim/fam into the admixture folder for the tool to work
-ln -s ../${PREFIX}_ALL.pruned.* .
+pushd "$OUT_DIR" >/dev/null
 
-for K in {7..10}; do
+for K in $KLIST; do
     echo "Running ADMIXTURE for K=$K"
-    admixture --cv ${PREFIX}_ALL.pruned.bed $K | tee log_K${K}.out
+    if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
+        benchmark_run "$METRICS_FILE" "admixture" "fit" "$K" "cv_log_K${K}.out" \
+            admixture --cv -j "$THREADS" "${PREFIX}_ALL.pruned.bed" "$K"
+    else
+        admixture --cv -j "$THREADS" "${PREFIX}_ALL.pruned.bed" "$K" | tee "cv_log_K${K}.out"
+    fi
 done
 
 # 5. Extract CV results for easy viewing
-grep "CV error" log_K*.out | sed 's/log_K\(.*\).out:CV error (K=\(.*\)): \(.*\)/\2 \3/' | sort -n > cv_results.txt
+grep "CV error" cv_log_K*.out | sed 's/cv_log_K\(.*\).out:CV error (K=\(.*\)): \(.*\)/\2 \3/' | sort -n > cv_results.txt
 popd >/dev/null
 
 echo "Pipeline complete. Results and logs are in dump/admixture/"
