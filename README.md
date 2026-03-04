@@ -18,15 +18,15 @@ pip install structure_threader --user
 ## Data and assets
 [1000 Genomes Phase 3 Data](https://www.nature.com/articles/nature15393) is a comprehensive release of the 1000 Genomes Project dataset, providing whole-genome sequencing–based variant calls for 2,504 individuals from 26 populations across five continental groups. In this project, we focus on autosomal biallelic SNPs and use an LD-pruned version of the autosomal data.
 
-For reproducibility, please place all input 1000 Genomes files in `./1000Genomes/`.
-For detailed download instructions and expected filenames, see `./1000Genomes/README.md`.
+For reproducibility, please place all input 1000 Genomes files in `1000Genomes/`.
+For detailed download instructions and expected filenames, see [1000Genomes/README.md](https://github.com/Hakuna25/Population_Structure_Modeling/blob/main/1000Genomes/README.md).
 
 ## Reproducible Workflow
 1. Create environment and install dependencies.
 2. Place 1000 Genomes input files in `1000Genomes/`.
 3. Edit `pipeline.conf` for config. 
 4. Open `analysis.ipynb` and run from top to bottom.
- We’ve already provided the preprocessed, merged 1000 Genomes Phase 3 chromosome dataset in ./dump, so you can run the tools directly. If you’re interested, you can also reproduce the preprocessing steps using the snippets included in the code.
+ We’ve already provided the preprocessed, merged 1000 Genomes Phase 3 chromosome dataset in `dump/`, so you can run the tools directly. If you’re interested, you can also reproduce the preprocessing steps using the snippets included in the code.
 
 ### Additional Notes
 - `preprocess.sh` contains shared preprocessing steps used by both methods:
