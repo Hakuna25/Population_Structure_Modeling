@@ -1,4 +1,4 @@
-# CSE284 Final Project
+# Comparing Global Ancestry Analysis Methods on 1000 Genomes Phase 3 Data
 
 [Xueqian Bai](https://hakuna25.github.io/), [Jialin Wu](https://jlwu.cn/), [Yutong Liang](https://www.lyt0112.com/)
 
