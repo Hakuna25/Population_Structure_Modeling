@@ -78,6 +78,21 @@ Each row in `metrics.tsv` contains:
     - `structure/`: the primary workspace for fastStructure. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
 - Root scripts: `preprocess.sh` are the shared preprocessing commands; `admixture.sh` and `structure.sh` are method implementations; `analysis.ipynb` is the main entry point for method calling and results analysis.
 
+## 📊 Current Results
+The detailed current results are shown in `analysis.ipynb`, here is a brief summary:
+
+- For ADMIXTURE, the cross-validation (CV) error drops quickly for small K=5 as the best clustering resolution for this dataset. For fastSTRUCTURE, the marginal likelihood shows a clear peak and elbow around K=5-6, indicating a similar estimate of the underlying number of clusters.
+
+- Both methods successfully identify the major continental clusters corresponding to the 1000 Genomes super-populations (AFR, AMR, EAS, EUR, SAS).
+
+- ADMIXTURE runs faster but uses more memory; the average runtime is 810 s for ADMIXTURE versus 2114 s for fastSTRUCTURE.
+
+- Both methods achieve high superpopulation assignment, with EUR, EAS, and SAS near 100% accuracy.
+
+- On Soft-label performance (K=5): the overall Brier score is 0.11971 for ADMIXTURE and 0.12735 for fastSTRUCTURE, indicating similar performance.
+
+- AMR shows complex multi-component ancestry in both methods, consistent with admixed population history.
+
 ## Remaining Work and Challenges
 - [ ] Conduct experiment on more random seeds (e.g. 1, 42, 284, 2026) and provide corresponding error bars across trials, to remove the impacts brought by initialzation, and to better evaluate the stability of the results.
 - [ ] Have a further investigation on other works in global ancestry inference, and introduce more measures to better compare different methods from other perspectives.
