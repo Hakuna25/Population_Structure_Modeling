@@ -3,7 +3,8 @@
 [Xueqian Bai](https://hakuna25.github.io/), [Jialin Wu](https://jlwu.cn/), [Yutong Liang](https://www.lyt0112.com/)
 
 ## Introduction
-Global ancestry analysis is a fundamental task in population genetics, aiming to infer the ancestral origins of individuals based on their genetic data. This analysis provides insights into human migration patterns, population structure, and evolutionary history. In this project, we focus on comparing two widely used model-based methods for global ancestry analysis: [ADMIXTURE](https://genome.cshlp.org/content/19/9/1655) and [fastSTRUCTURE](https://doi.org/10.1534/genetics.114.164350). Both methods utilize genotype data to estimate the proportion of ancestry from different populations for each individual. By applying these methods to the 1000 Genomes Phase 3 dataset, we aim to evaluate their performance and compare the inferred ancestry proportions across different populations.
+Global ancestry analysis is a fundamental task in population genetics, aiming to infer the ancestral origins of individuals based on their genetic data. This analysis provides insights into human migration patterns, population structure, and evolutionary history. In this project, we focus on comparing two widely used model-based methods for global ancestry analysis: [ADMIXTURE](https://genome.cshlp.org/content/19/9/1655) and [fastSTRUCTURE](https://doi.org/10.1534/genetics.114.164350). ADMIXTURE is a maximum-likelihood
+admixture model that estimates individual ancestry proportions efficiently for large SNP datasets using numerical optimization. In contrast, fastSTRUCTURE adopts a Bayesian framework and applies variational inference to approximate posterior distributions of ancestry proportions. Both methods utilize genotype data to estimate the proportion of ancestry from different populations for each individual. By applying these methods to the 1000 Genomes Phase 3 dataset, we aim to evaluate their performance and compare the inferred ancestry proportions across different populations.
 
 ## Requirements
 - Python 3.11
@@ -21,7 +22,14 @@ pip install structure_threader --user
 For reproducibility, please place all input 1000 Genomes files in `1000Genomes/`.
 For detailed download instructions and expected filenames, see [1000Genomes/README.md](https://github.com/Hakuna25/Population_Structure_Modeling/blob/main/1000Genomes/README.md).
 
+
+## 🚀 Quick Start (View Results)
+If you want to skip the computation and dive straight into the findings:
+
+Open `analysis.ipynb`: This notebook contains the pre-rendered experimental results, visualizations, and detailed analysis.
+
 ## Reproducible Workflow
+Follow these steps to reproduce the environment and the full analysis from scratch:
 1. Create environment and install dependencies.
 2. Place 1000 Genomes input files in `1000Genomes/`.
 3. Edit `pipeline.conf` for config. 
