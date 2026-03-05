@@ -9,7 +9,7 @@ LOG_FILE="$OUT_DIR/test.log"
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] [INFO] Start test" | tee -a "$LOG_FILE"
 
-for script in preprocess.sh admixture.sh structure.sh test.sh; do
+for script in preprocess.sh admixture.sh structure.sh benchmark.sh test.sh; do
     bash -n "$ROOT_DIR/$script"
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] [INFO] bash -n passed: $script" | tee -a "$LOG_FILE"
 done

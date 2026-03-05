@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 OUT_DIR=""
 PREFIX=""
 SAMPLE_INFO="1000Genomes/igsr_samples.tsv"
@@ -11,10 +13,6 @@ MAF="0.01"
 LD_WINDOW="50"
 LD_STEP="10"
 LD_R2="0.1"
-METHOD=""
-KLIST=""
-THREADS=""
-FASTSTRUCTURE_BIN=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -29,12 +27,8 @@ while [[ $# -gt 0 ]]; do
         --ld-window) LD_WINDOW="$2"; shift 2 ;;
         --ld-step) LD_STEP="$2"; shift 2 ;;
         --ld-r2) LD_R2="$2"; shift 2 ;;
-        --method) METHOD="$2"; shift 2 ;;
-        --klist) KLIST="$2"; shift 2 ;;
-        --threads) THREADS="$2"; shift 2 ;;
-        --faststructure-bin) FASTSTRUCTURE_BIN="$2"; shift 2 ;;
         --help)
-            echo "Usage: bash preprocess.sh --out-dir DIR --prefix NAME [--sample-info FILE] [--chr-start N] [--chr-end N] [--skip-merge] [--run-chr-process] [--maf V] [--ld-window N] [--ld-step N] [--ld-r2 V] [--method structure --klist \"2 3\" --threads N --faststructure-bin PATH]"
+            echo "Usage: bash preprocess.sh --out-dir DIR --prefix NAME [--sample-info FILE] [--chr-start N] [--chr-end N] [--skip-merge] [--run-chr-process] [--maf V] [--ld-window N] [--ld-step N] [--ld-r2 V]"
             exit 0
             ;;
         *)
@@ -51,11 +45,21 @@ fi
 
 mkdir -p "$OUT_DIR"
 
-grep "1000 Genomes phase 3 release" "$SAMPLE_INFO" | awk '{print $1 "\t" $1}' > "$OUT_DIR/${PREFIX}_samples.txt"
+if ! command -v plink >/dev/null 2>&1; then
+    echo "plink not found in PATH"
+    exit 127
+fi
+
+awk '/1000 Genomes phase 3 release/ {print $1 "\t" $1}' "$SAMPLE_INFO" > "$OUT_DIR/${PREFIX}_samples.txt"
+
+if [[ ! -s "$OUT_DIR/${PREFIX}_samples.txt" ]]; then
+    echo "No samples extracted from $SAMPLE_INFO"
+    exit 2
+fi
 
 if [[ "$RUN_CHR_PROCESS" == "1" ]]; then
     for chr_number in $(seq "$CHR_START" "$CHR_END"); do
-        vcf="1000Genomes/1000G_chr${chr_number}_pruned.vcf.gz"
+        vcf="1000Genomes/ALL.chr${chr_number}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz"
 
         echo "Processing Chromosome $chr_number..."
 
@@ -73,12 +77,9 @@ for i in $(seq "$(( CHR_START + 1 ))" "$CHR_END"); do
 done
 
 if [[ "$SKIP_MERGE" != "1" ]]; then
+    if [[ ! -f "$OUT_DIR/${PREFIX}_chr1.pruned.bed" || ! -f "$OUT_DIR/${PREFIX}_chr1.pruned.bim" || ! -f "$OUT_DIR/${PREFIX}_chr1.pruned.fam" ]]; then
+        echo "Missing required chr1 pruned PLINK files for merge: $OUT_DIR/${PREFIX}_chr1.pruned.*"
+        exit 2
+    fi
     plink --bfile "$OUT_DIR/${PREFIX}_chr1.pruned" --merge-list "$MERGE_LIST" --make-bed --out "$OUT_DIR/${PREFIX}_ALL.pruned"
-fi
-
-if [[ "$METHOD" == "structure" ]]; then
-    echo "Running STRUCTURE_THREADER"
-    echo "Using fastStructure binary: $FASTSTRUCTURE_BIN"
-    echo "K list: $KLIST"
-    echo "Threads: $THREADS"
 fi

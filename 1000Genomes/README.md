@@ -14,3 +14,11 @@ Place all files directly under this folder:
     ...
     1000G_chr22_pruned.vcf.gz
 ```
+
+You can also use the original VCF files if you want to test the full pipeline. In this situation, the additional required files include:
+```1000Genomes/
+    ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
+    ...
+    ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
+```
+You also need to change the `RUN_CHR_PROCESS="0"` in `preprocess.sh` to `RUN_CHR_PROCESS="1"` to enable pruning from raw files.

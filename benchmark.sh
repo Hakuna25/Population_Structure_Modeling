@@ -3,10 +3,11 @@
 init_metrics_file() {
     local metrics_file="$1"
     local metrics_dir
+    local reset_metrics="${BENCHMARK_RESET_METRICS:-1}"
     metrics_dir="$(dirname "$metrics_file")"
     mkdir -p "$metrics_dir"
 
-    if [[ ! -f "$metrics_file" ]]; then
+    if [[ "$reset_metrics" == "1" || ! -f "$metrics_file" ]]; then
         printf "timestamp\tmethod\tstep\tK\telapsed_sec\tuser_cpu_sec\tsys_cpu_sec\tmax_rss_kb\texit_code\tlog_file\n" > "$metrics_file"
     fi
 }
@@ -28,6 +29,9 @@ benchmark_run() {
 
     start_ts="$(date +%s)"
     tmp_time="$(mktemp)"
+
+    # Clear log file before writing to avoid stale data from previous runs
+    : > "$log_file"
 
     if [[ -x /usr/bin/time ]]; then
         /usr/bin/time -f 'user_cpu_sec=%U\nsys_cpu_sec=%S\nmax_rss_kb=%M' -o "$tmp_time" "$@" \

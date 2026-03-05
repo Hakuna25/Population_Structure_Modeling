@@ -1,29 +1,31 @@
 PLINK v1.9.0-b.8 64-bit (22 Oct 2024)
 Options in effect:
-  --bfile dump/admixture_chr1.pruned
+  --bfile dump/admixture/admixture_chr1.pruned
   --make-bed
-  --merge-list admixture_filenames.txt
-  --out ./dump/admixture_ALL.pruned
+  --merge-list dump/admixture/mergelist.txt
+  --out dump/admixture/admixture_ALL.pruned
 
-Hostname: xueqian-Alienware-Aurora-R15-AMD
-Working directory: /home/xueqian/xq/cse284/final_project
-Start time: Thu Feb 26 14:27:43 2026
+Hostname: jlwu
+Working directory: /home/wjl/Population_Structure_Modeling
+Start time: Wed Mar  4 10:46:50 2026
 
-Random number seed: 1772144863
-31789 MB RAM detected; reserving 15894 MB for main workspace.
+Random number seed: 1772650010
+15544 MB RAM detected; reserving 7772 MB for main workspace.
 Performing single-pass merge (2504 people, 95251 variants).
-Merged fileset written to ./dump/admixture_ALL.pruned-merge.bed +
-./dump/admixture_ALL.pruned-merge.bim + ./dump/admixture_ALL.pruned-merge.fam .
+Merged fileset written to dump/admixture/admixture_ALL.pruned-merge.bed +
+dump/admixture/admixture_ALL.pruned-merge.bim +
+dump/admixture/admixture_ALL.pruned-merge.fam .
 95251 variants loaded from .bim file.
 2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
-Ambiguous sex IDs written to ./dump/admixture_ALL.pruned.nosex .
+Ambiguous sex IDs written to dump/admixture/admixture_ALL.pruned.nosex .
 Using 1 thread (no multithreaded calculations invoked).
 Before main variant filters, 2504 founders and 0 nonfounders present.
 Calculating allele frequencies... done.
 Total genotyping rate is 0.999925.
 95251 variants and 2504 people pass filters and QC.
 Note: No phenotypes present.
---make-bed to ./dump/admixture_ALL.pruned.bed + ./dump/admixture_ALL.pruned.bim
-+ ./dump/admixture_ALL.pruned.fam ... done.
+--make-bed to dump/admixture/admixture_ALL.pruned.bed +
+dump/admixture/admixture_ALL.pruned.bim +
+dump/admixture/admixture_ALL.pruned.fam ... done.
 
-End time: Thu Feb 26 14:27:44 2026
+End time: Wed Mar  4 10:46:51 2026

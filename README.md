@@ -1,6 +1,7 @@
 # Comparing Global Ancestry Analysis Methods on 1000 Genomes Phase 3 Data
 
-[Xueqian Bai](https://hakuna25.github.io/), [Jialin Wu](https://jlwu.cn/), [Yutong Liang](https://www.lyt0112.com/)
+<!-- [Xueqian Bai](https://hakuna25.github.io/), [Jialin Wu](https://jlwu.cn/), [Yutong Liang](https://www.lyt0112.com/) -->
+Xueqian Bai, Jialin Wu, Yutong Liang
 
 ## Introduction
 Global ancestry analysis is a fundamental task in population genetics, aiming to infer the ancestral origins of individuals based on their genetic data. This analysis provides insights into human migration patterns, population structure, and evolutionary history. In this project, we focus on comparing two widely used model-based methods for global ancestry analysis: [ADMIXTURE](https://genome.cshlp.org/content/19/9/1655) and [fastSTRUCTURE](https://doi.org/10.1534/genetics.114.164350). ADMIXTURE is a maximum-likelihood
@@ -8,12 +9,23 @@ admixture model that estimates individual ancestry proportions efficiently for l
 
 ## Requirements
 - Python 3.11
-- plink==1.90b7.7, admixture==1.3.0, faststructure==1.0
+- plink==1.90b7.7, admixture==1.3.1, faststructure==1.0
 
 ## Installation
 ```
 conda env create -f env.yml
+conda activate bio_tools
 pip install structure_threader --user
+
+# install official ADMIXTURE 1.3.1 binary
+mkdir -p tools
+cd tools
+wget https://dalexander.github.io/admixture/binaries/admixture_linux-1.3.1.tar.gz
+tar -xzf admixture_linux-1.3.1.tar.gz
+cd ..
+
+# configure pipeline binary path in pipeline.conf
+# ADMIXTURE_BIN="$PWD/tools/admixture_linux-1.3.1/admixture"
 ```
 ## 🚀 Quick Start (View Results)
 If you want to skip the computation and dive straight into the findings:
@@ -66,10 +78,11 @@ Each row in `metrics.tsv` contains:
     - `structure/`: the primary workspace for fastStructure. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
 - Root scripts: `preprocess.sh` are the shared preprocessing commands; `admixture.sh` and `structure.sh` are method implementations; `analysis.ipynb` is the main entry point for method calling and results analysis.
 
-## To-Do-List
-- Adjust the plot to ensure the same color consistently corresponds to the same population.
-- Explore how runtime varies with the choice of K value.
-- If time allows, experiment with one more method: STRUCTURE.
+## Remaining Work and Challenges
+- [ ] Conduct experiment on more random seeds (e.g. 1, 42, 284, 2026) and provide corresponding error bars across trials, to remove the impacts brought by initialzation, and to better evaluate the stability of the results.
+- [ ] Have a further investigation on other works in global ancestry inference, and introduce more measures to better compare different methods from other perspectives.
+- [ ] Consider more fine-grained label beyond superpopulations, e.g. the population label.
+- [ ] Make the plots more pretty, e.g. adjust the plot to ensure the same color consistently corresponds to the same population.
 
 ## Citation
 ```bibtex

@@ -1,0 +1,5 @@
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 8 --input /home/wjl/Population_Structure_Modeling/dump/structure/structure_ALL.pruned --output /home/wjl/Population_Structure_Modeling/dump/structure/structure_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
