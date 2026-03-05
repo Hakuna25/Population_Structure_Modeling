@@ -20,13 +20,13 @@ If you want to skip the computation and dive straight into the findings:
 
 Open `analysis.ipynb`: This notebook contains the pre-rendered experimental results, visualizations, and detailed analysis.
 
-## Data and assets
+## 🧬 Data and assets
 [1000 Genomes Phase 3 Data](https://www.nature.com/articles/nature15393) is a comprehensive release of the 1000 Genomes Project dataset, providing whole-genome sequencing–based variant calls for 2,504 individuals from 26 populations across five continental groups. In this project, we focus on autosomal biallelic SNPs and use an LD-pruned version of the autosomal data.
 
 For reproducibility, please place all input 1000 Genomes files in `1000Genomes/`.
 For detailed download instructions and expected filenames, see [1000Genomes/README.md](https://github.com/Hakuna25/Population_Structure_Modeling/blob/main/1000Genomes/README.md).
 
-## Reproducible Workflow
+## ⚙️ Reproducible Workflow
 Follow these steps to reproduce the environment and the full analysis from scratch:
 1. Create environment and install dependencies.
 2. Place 1000 Genomes input files in `1000Genomes/`.
@@ -43,7 +43,7 @@ Follow these steps to reproduce the environment and the full analysis from scrat
 
 - `bash test.sh` provides a quick test for the environment setup and method implementation. Test outputs are written to `dump/test/`.
 
-## Runtime & Memory Benchmarking
+## ⚡ Runtime & Memory Benchmarking
 Both pipelines support built-in benchmarking (wall-clock runtime + peak memory usage).
 
 - Enable/disable in `pipeline.conf`:
@@ -59,12 +59,17 @@ Each row in `metrics.tsv` contains:
 - `elapsed_sec`: time in seconds
 - `max_rss_kb`: peak resident memory (KB)
 
-## Repository structure
+## 🌳 Repository structure
 - `1000Genomes/`: contains the original input data, specifically the igsr_samples.tsv and the prunded VCF files.
 - `dump/`:
     - `admixture/`: the primary workspace for Admixture. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
     - `structure/`: the primary workspace for fastStructure. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
 - Root scripts: `preprocess.sh` are the shared preprocessing commands; `admixture.sh` and `structure.sh` are method implementations; `analysis.ipynb` is the main entry point for method calling and results analysis.
+
+## To-Do-List
+- Adjust the plot to ensure the same color consistently corresponds to the same population.
+- Explore how runtime varies with the choice of K value.
+- If time allows, experiment with one more method: STRUCTURE.
 
 ## Citation
 ```bibtex
