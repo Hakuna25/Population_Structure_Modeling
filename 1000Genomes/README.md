@@ -21,4 +21,4 @@ You can also use the original VCF files if you want to test the full pipeline. I
     ...
     ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
 ```
-You also need to change the `RUN_CHR_PROCESS="0"` in `preprocess.sh` to `RUN_CHR_PROCESS="1"` to enable pruning from raw files.
+Run `preprocess.sh` (directly or from `analysis.ipynb`) to build the shared `dump/common/common_ALL.pruned.*` dataset from the raw VCFs, then let each method script consume that shared input directly.

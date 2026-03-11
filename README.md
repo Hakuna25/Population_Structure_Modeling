@@ -9,13 +9,17 @@ admixture model that estimates individual ancestry proportions efficiently for l
 
 ## Requirements
 - Python 3.11
-- plink==1.90b7.7, admixture==1.3.1, faststructure==1.0
+- Main environment: plink==1.90b7.7, admixture==1.3.1, faststructure==1.0
+- Separate environment: bcftools
 
 ## Installation
 ```
 conda env create -f env.yml
 conda activate bio_tools
 pip install structure_threader --user
+
+# create a dedicated bcftools environment
+conda env create -f env_bcftools.yml
 
 # install official ADMIXTURE 1.3.1 binary
 mkdir -p tools
@@ -24,13 +28,18 @@ wget https://dalexander.github.io/admixture/binaries/admixture_linux-1.3.1.tar.g
 tar -xzf admixture_linux-1.3.1.tar.gz
 cd ..
 
-# configure pipeline binary path in pipeline.conf
+# configure pipeline binary paths in pipeline.conf
 # ADMIXTURE_BIN="$PWD/tools/admixture_linux-1.3.1/admixture"
+# BCFTOOLS_BIN="$HOME/anaconda3/envs/bcftools_tools/bin/bcftools"
+# REF_FA="1000Genomes/reference/human_g1k_v37.fasta.gz"
+# PREPROCESS_THREADS="8"
+# DATA_PREPROCESS_DIR="dump/common"
+# DATA_PREPROCESS_PREFIX="common"
 ```
 ## 🚀 Quick Start (View Results)
 If you want to skip the computation and dive straight into the findings:
 
-Open `analysis.ipynb`: This notebook contains the pre-rendered experimental results, visualizations, and detailed analysis.
+Open `analysis.ipynb`: This notebook contains the pre-rendered experimental results, visualizations, and detailed analysis. It also includes extra experiment blocks for `no LD pruning` and `MAF=0.05`, alongside the original baseline workflow.
 
 ## 🧬 Data and assets
 [1000 Genomes Phase 3 Data](https://www.nature.com/articles/nature15393) is a comprehensive release of the 1000 Genomes Project dataset, providing whole-genome sequencing–based variant calls for 2,504 individuals from 26 populations across five continental groups. In this project, we focus on autosomal biallelic SNPs and use an LD-pruned version of the autosomal data.
@@ -38,20 +47,35 @@ Open `analysis.ipynb`: This notebook contains the pre-rendered experimental resu
 For reproducibility, please place all input 1000 Genomes files in `1000Genomes/`.
 For detailed download instructions and expected filenames, see [1000Genomes/README.md](https://github.com/Hakuna25/Population_Structure_Modeling/blob/main/1000Genomes/README.md).
 
+For `bcftools norm`, `preprocess.sh` will automatically download the GRCh37 reference FASTA and index into `1000Genomes/reference/` if they are missing.
+
+Official reference files used by the script:
+- [human_g1k_v37.fasta.gz](https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.gz)
+- [human_g1k_v37.fasta.fai](https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.fai)
+
 ## ⚙️ Reproducible Workflow
 Follow these steps to reproduce the environment and the full analysis from scratch:
 1. Create environment and install dependencies.
 2. Place 1000 Genomes input files in `1000Genomes/`.
 3. Edit `pipeline.conf` for config. 
-4. Open `analysis.ipynb` and run from top to bottom.
+4. Open `analysis.ipynb` and run the shared `preprocess.sh` step once.
+5. Run `admixture.sh` or `structure.sh`; both scripts consume the shared `dump/common/common_ALL.pruned.*` outputs directly.
  We’ve already provided the preprocessed, merged 1000 Genomes Phase 3 chromosome dataset in `dump/`, so you can run the tools directly. If you’re interested, you can also reproduce the preprocessing steps using the snippets included in the code.
 
 ### Additional Notes
-- `preprocess.sh` contains shared preprocessing steps used by both methods:
+- `preprocess.sh` contains the shared preprocessing steps:
   - sample extraction
+  - per-chromosome VCF normalization and deduplication with `bcftools norm -f "$REF_FA" -m -any -d exact`
+  - PLINK conversion to chromosome-level binary files
+  - variant ID normalization for downstream merge safety
+  - LD pruning from the shared chromosome-level files
   - merge-list creation
   - merged PLINK generation
-  - optional per-chromosome preprocessing loop (`--run-chr-process`)
+  - optional chromosome-stage reuse via `RUN_CHR_PROCESS=0`
+
+- `bcftools` is resolved through `BCFTOOLS_BIN`. By default, the pipeline first checks `PATH`, then falls back to `<conda-root>/envs/bcftools_tools/bin/bcftools`.
+- The reference FASTA path is controlled by `REF_FA` in `pipeline.conf`. If the FASTA or index is missing, `preprocess.sh` downloads the official 1000 Genomes reference files automatically.
+- Preprocessing thread count is controlled by `PREPROCESS_THREADS` in `pipeline.conf` or `preprocess.sh --threads`.
 
 - `bash test.sh` provides a quick test for the environment setup and method implementation. Test outputs are written to `dump/test/`.
 
@@ -74,9 +98,10 @@ Each row in `metrics.tsv` contains:
 ## 🌳 Repository structure
 - `1000Genomes/`: contains the original input data, specifically the igsr_samples.tsv and the prunded VCF files.
 - `dump/`:
+    - `common/`: shared outputs from `preprocess.sh`.
     - `admixture/`: the primary workspace for Admixture. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
     - `structure/`: the primary workspace for fastStructure. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
-- Root scripts: `preprocess.sh` are the shared preprocessing commands; `admixture.sh` and `structure.sh` are method implementations; `analysis.ipynb` is the main entry point for method calling and results analysis.
+- Root scripts: `preprocess.sh` builds the shared analysis input once, `admixture.sh` and `structure.sh` run the two methods, and `analysis.ipynb` is the main entry point for orchestration and results analysis.
 
 ## 📊 Current Results
 The detailed current results are shown in `analysis.ipynb`, here is a brief summary:

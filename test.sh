@@ -25,18 +25,6 @@ fi
 PRE_DIR="$TMP_DIR/pre"
 mkdir -p "$PRE_DIR"
 
-for chr in 1 2 3; do
-    for ext in bed bim fam; do
-        src="$ROOT_DIR/dump/admixture/admixture_chr${chr}.pruned.${ext}"
-        dst="$PRE_DIR/demo_chr${chr}.pruned.${ext}"
-        if [[ ! -f "$src" ]]; then
-            echo "[$(date '+%Y-%m-%d %H:%M:%S')] [ERROR] missing required file: $src" | tee -a "$LOG_FILE"
-            exit 1
-        fi
-        cp "$src" "$dst"
-    done
-done
-
 bash "$ROOT_DIR/preprocess.sh" \
     --out-dir "$PRE_DIR" \
     --prefix "demo" \

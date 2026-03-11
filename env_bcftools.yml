@@ -1,0 +1,7 @@
+name: bcftools_tools
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bcftools

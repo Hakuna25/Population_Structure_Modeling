@@ -12,6 +12,19 @@ init_metrics_file() {
     fi
 }
 
+append_metrics_row() {
+    local metrics_file="$1"
+    local row="$2"
+    local lock_dir="${metrics_file}.lockdir"
+
+    while ! mkdir "$lock_dir" 2>/dev/null; do
+        sleep 0.1
+    done
+
+    printf "%s" "$row" >> "$metrics_file"
+    rmdir "$lock_dir"
+}
+
 benchmark_run() {
     local metrics_file="$1"
     local method="$2"
@@ -50,8 +63,8 @@ benchmark_run() {
     elapsed_sec="$((end_ts - start_ts))"
     timestamp="$(date '+%Y-%m-%d %H:%M:%S')"
 
-    printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" \
-        "$timestamp" "$method" "$step" "$k_value" "$elapsed_sec" "$user_cpu_sec" "$sys_cpu_sec" "$max_rss_kb" "$exit_code" "$log_file" >> "$metrics_file"
+    append_metrics_row "$metrics_file" "$(printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" \
+        "$timestamp" "$method" "$step" "$k_value" "$elapsed_sec" "$user_cpu_sec" "$sys_cpu_sec" "$max_rss_kb" "$exit_code" "$log_file")"
 
     rm -f "$tmp_time"
     return "$exit_code"
