@@ -12,8 +12,8 @@ OUT_DIR=""
 PREFIX=""
 SAMPLE_INFO="${SAMPLE_INFO:-1000Genomes/igsr_samples.tsv}"
 BCFTOOLS_BIN="${BCFTOOLS_BIN:-$(command -v bcftools || true)}"
-REF_FA="${REF_FA:-1000Genomes/reference/human_g1k_v37.fasta.gz}"
-REF_FAI="${REF_FAI:-${REF_FA%.gz}.fai}"
+REF_FA="${REF_FA:-1000Genomes/reference/human_g1k_v37.fasta}"
+REF_FAI="${REF_FAI:-${REF_FA}.fai}"
 REF_FA_URL="${REF_FA_URL:-https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.gz}"
 REF_FAI_URL="${REF_FAI_URL:-https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.fai}"
 PREPROCESS_THREADS="${PREPROCESS_THREADS:-8}"
@@ -95,20 +95,25 @@ if ! command -v wget >/dev/null 2>&1; then
     exit 127
 fi
 
+if ! command -v gunzip >/dev/null 2>&1; then
+    echo "gunzip not found in PATH"
+    exit 127
+fi
+
 mkdir -p "$(dirname "$REF_FA")"
 if [[ ! -f "$REF_FA" ]]; then
-    echo "Downloading $(basename "$REF_FA")..."
-    wget -O "$REF_FA" "$REF_FA_URL"
+    REF_FA_GZ="${REF_FA}.gz"
+    if [[ ! -f "$REF_FA_GZ" ]]; then
+        echo "Downloading $(basename "$REF_FA_GZ")..."
+        wget -O "$REF_FA_GZ" "$REF_FA_URL"
+    fi
+    echo "Decompressing $(basename "$REF_FA_GZ")..."
+    gunzip -c "$REF_FA_GZ" > "$REF_FA"
 fi
 
 if [[ ! -f "$REF_FAI" ]]; then
     echo "Downloading $(basename "$REF_FAI")..."
     wget -O "$REF_FAI" "$REF_FAI_URL"
-fi
-
-REF_FA_COMPANION_FAI="${REF_FA}.fai"
-if [[ "$REF_FAI" != "$REF_FA_COMPANION_FAI" && ! -e "$REF_FA_COMPANION_FAI" ]]; then
-    ln -s "$(realpath --relative-to="$(dirname "$REF_FA_COMPANION_FAI")" "$REF_FAI")" "$REF_FA_COMPANION_FAI"
 fi
 
 awk '/1000 Genomes phase 3 release/ {print $1 "\t" $1}' "$SAMPLE_INFO" > "$OUT_DIR/${PREFIX}_samples.txt"

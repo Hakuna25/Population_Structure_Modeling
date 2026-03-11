@@ -31,7 +31,7 @@ cd ..
 # configure pipeline binary paths in pipeline.conf
 # ADMIXTURE_BIN="$PWD/tools/admixture_linux-1.3.1/admixture"
 # BCFTOOLS_BIN="$HOME/anaconda3/envs/bcftools_tools/bin/bcftools"
-# REF_FA="1000Genomes/reference/human_g1k_v37.fasta.gz"
+# REF_FA="1000Genomes/reference/human_g1k_v37.fasta"
 # PREPROCESS_THREADS="8"
 # DATA_PREPROCESS_DIR="dump/common"
 # DATA_PREPROCESS_PREFIX="common"
@@ -47,7 +47,7 @@ Open `analysis.ipynb`: This notebook contains the pre-rendered experimental resu
 For reproducibility, please place all input 1000 Genomes files in `1000Genomes/`.
 For detailed download instructions and expected filenames, see [1000Genomes/README.md](https://github.com/Hakuna25/Population_Structure_Modeling/blob/main/1000Genomes/README.md).
 
-For `bcftools norm`, `preprocess.sh` will automatically download the GRCh37 reference FASTA and index into `1000Genomes/reference/` if they are missing.
+For `bcftools norm`, `preprocess.sh` will automatically download the GRCh37 reference FASTA archive and index into `1000Genomes/reference/`, then decompress the archive to a plain `.fasta` file if needed.
 
 Official reference files used by the script:
 - [human_g1k_v37.fasta.gz](https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.gz)
@@ -74,7 +74,7 @@ Follow these steps to reproduce the environment and the full analysis from scrat
   - optional chromosome-stage reuse via `RUN_CHR_PROCESS=0`
 
 - `bcftools` is resolved through `BCFTOOLS_BIN`. By default, the pipeline first checks `PATH`, then falls back to `<conda-root>/envs/bcftools_tools/bin/bcftools`.
-- The reference FASTA path is controlled by `REF_FA` in `pipeline.conf`. If the FASTA or index is missing, `preprocess.sh` downloads the official 1000 Genomes reference files automatically.
+- The reference FASTA path is controlled by `REF_FA` in `pipeline.conf`. If the FASTA or index is missing, `preprocess.sh` downloads `human_g1k_v37.fasta.gz`, decompresses it to `human_g1k_v37.fasta`, and downloads the matching `.fai` index automatically.
 - Preprocessing thread count is controlled by `PREPROCESS_THREADS` in `pipeline.conf` or `preprocess.sh --threads`.
 
 - `bash test.sh` provides a quick test for the environment setup and method implementation. Test outputs are written to `dump/test/`.
