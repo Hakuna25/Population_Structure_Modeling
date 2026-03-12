@@ -1,0 +1,12 @@
+timestamp	method	step	K	elapsed_sec	user_cpu_sec	sys_cpu_sec	max_rss_kb	exit_code	log_file
+2026-03-12 00:19:12	faststructure	fit	2	30	30.93	0.24	221596	0	dump/special_chr20_maf005_pruned/structure/structure_threader_K2.log
+2026-03-12 00:20:03	faststructure	fit	3	81	81.38	0.35	248000	0	dump/special_chr20_maf005_pruned/structure/structure_threader_K3.log
+2026-03-12 00:21:40	faststructure	fit	4	178	178.48	0.38	274532	0	dump/special_chr20_maf005_pruned/structure/structure_threader_K4.log
+2026-03-12 00:30:29	faststructure	fit	5	325	325.22	0.32	301864	0	dump/special_chr20_maf005_pruned/structure/structure_threader_K5.log
+2026-03-12 00:33:11	faststructure	fit	7	487	487.02	0.39	355640	0	dump/special_chr20_maf005_pruned/structure/structure_threader_K7.log
+2026-03-12 00:34:17	faststructure	fit	6	553	553.47	0.35	327728	1	dump/special_chr20_maf005_pruned/structure/structure_threader_K6.log
+2026-03-12 00:35:40	faststructure	fit	8	636	636.53	0.52	381620	1	dump/special_chr20_maf005_pruned/structure/structure_threader_K8.log
+2026-03-12 00:42:21	faststructure	fit	9	712	714.37	0.37	408572	1	dump/special_chr20_maf005_pruned/structure/structure_threader_K9.log
+2026-03-12 00:45:39	faststructure	fit	10	748	750.28	0.68	435588	1	dump/special_chr20_maf005_pruned/structure/structure_threader_K10.log
+
+2026-03-12 00:55:55	faststructure	K_selection	all	0	3.13	0.03	29760	0	dump/special_chr20_maf005_pruned/structure/best_K.txt

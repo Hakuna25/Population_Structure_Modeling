@@ -77,6 +77,7 @@ run_one_k() {
     local K="$1"
     local fit_exit_code=0
     local meanq_file
+    local -a run_cmd
 
     meanq_file="$RESULT_DIR/fS_run_K.${K}.meanQ"
     if [[ -f "$meanq_file" ]]; then
@@ -84,13 +85,30 @@ run_one_k() {
         return 0
     fi
 
+    # Disable structure_threader's internal bestK tests and plotting.
+    # This script launches one K per invocation, so those global post-processing
+    # steps can incorrectly fail even when fastStructure itself produced meanQ.
+    run_cmd=(
+        "$STRUCTURE_THREADER_BIN" run
+        -Klist "$K"
+        -R "$REPLICATES"
+        -i "$INPUT_BED"
+        -o "$RESULT_DIR"
+        -t 1
+        --ind "$IND_FILE"
+        --seed "$RANDOM_SEED"
+        --no_tests True
+        --no_plots True
+        -fs "$FASTSTRUCTURE_BIN"
+    )
+
     echo "Running fastStructure for K=$K"
     if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
         benchmark_run "$METRICS_FILE" "faststructure" "fit" "$K" "$OUT_DIR/structure_threader_K${K}.log" \
-            "$STRUCTURE_THREADER_BIN" run -Klist "$K" -R "$REPLICATES" -i "$INPUT_BED" -o "$RESULT_DIR" -t 1 --ind "$IND_FILE" --seed "$RANDOM_SEED" -fs "$FASTSTRUCTURE_BIN"
+            "${run_cmd[@]}"
         fit_exit_code=$?
     else
-        "$STRUCTURE_THREADER_BIN" run -Klist "$K" -R "$REPLICATES" -i "$INPUT_BED" -o "$RESULT_DIR" -t 1 --ind "$IND_FILE" --seed "$RANDOM_SEED" -fs "$FASTSTRUCTURE_BIN"
+        "${run_cmd[@]}"
         fit_exit_code=$?
     fi
 

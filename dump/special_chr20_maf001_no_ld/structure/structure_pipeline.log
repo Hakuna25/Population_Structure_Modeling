@@ -1,0 +1,84 @@
+Running fastStructure for K=2
+Running fastStructure for K=3
+Running fastStructure for K=4
+Running fastStructure for K=5
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 2 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 3 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 4 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 5 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+Running fastStructure for K=6
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 6 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+Running fastStructure for K=7
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 7 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+Running fastStructure for K=8
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 8 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+Running fastStructure for K=9
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 9 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+ERROR: [31mThere are no valid K values to plot. 
+
+Valid kvals: dict_keys([6])
+Provided kvals: [5]
+Exiting.[0m
+ERROR: fastStructure failed at K=6 with exit code 1. See dump/special_chr20_maf001_no_ld/structure/structure_threader_K6.log
+Running fastStructure for K=10
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 10 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+ERROR: [31mThere are no valid K values to plot. 
+
+Valid kvals: dict_keys([7])
+Provided kvals: [5]
+Exiting.[0m
+ERROR: fastStructure failed at K=7 with exit code 1. See dump/special_chr20_maf001_no_ld/structure/structure_threader_K7.log
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+ERROR: [31mThere are no valid K values to plot. 
+
+Valid kvals: dict_keys([10])
+Provided kvals: [5]
+Exiting.[0m
+ERROR: fastStructure failed at K=10 with exit code 1. See dump/special_chr20_maf001_no_ld/structure/structure_threader_K10.log
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+ERROR: [31mThere are no valid K values to plot. 
+
+Valid kvals: dict_keys([9])
+Provided kvals: [5]
+Exiting.[0m
+ERROR: fastStructure failed at K=9 with exit code 1. See dump/special_chr20_maf001_no_ld/structure/structure_threader_K9.log
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+ERROR: [31mThere are no valid K values to plot. 
+
+Valid kvals: dict_keys([8])
+Provided kvals: [5]
+Exiting.[0m
+ERROR: fastStructure failed at K=8 with exit code 1. See dump/special_chr20_maf001_no_ld/structure/structure_threader_K8.log

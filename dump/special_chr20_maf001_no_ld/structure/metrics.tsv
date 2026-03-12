@@ -1,0 +1,10 @@
+timestamp	method	step	K	elapsed_sec	user_cpu_sec	sys_cpu_sec	max_rss_kb	exit_code	log_file
+2026-03-12 07:28:27	faststructure	fit	2	801	799.43	2.64	812672	0	dump/special_chr20_maf001_no_ld/structure/structure_threader_K2.log
+2026-03-12 07:56:50	faststructure	fit	3	2504	2503.43	1.71	883972	0	dump/special_chr20_maf001_no_ld/structure/structure_threader_K3.log
+2026-03-12 08:21:01	faststructure	fit	4	3955	3949.01	7.49	938244	0	dump/special_chr20_maf001_no_ld/structure/structure_threader_K4.log
+2026-03-12 08:24:21	faststructure	fit	5	4155	4153.64	2.38	1009540	0	dump/special_chr20_maf001_no_ld/structure/structure_threader_K5.log
+2026-03-12 08:30:12	faststructure	fit	6	3705	3700.52	6.75	1059828	1	dump/special_chr20_maf001_no_ld/structure/structure_threader_K6.log
+2026-03-12 09:00:29	faststructure	fit	7	3819	3819.94	2.06	1120936	1	dump/special_chr20_maf001_no_ld/structure/structure_threader_K7.log
+2026-03-12 09:45:58	faststructure	fit	10	4546	4542.00	7.63	1323656	1	dump/special_chr20_maf001_no_ld/structure/structure_threader_K10.log
+2026-03-12 12:19:51	faststructure	fit	9	14130	14119.10	13.99	1242968	1	dump/special_chr20_maf001_no_ld/structure/structure_threader_K9.log
+2026-03-12 13:06:00	faststructure	fit	8	17099	17077.16	24.17	1181656	1	dump/special_chr20_maf001_no_ld/structure/structure_threader_K8.log

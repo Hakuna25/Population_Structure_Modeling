@@ -1,0 +1,10 @@
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 7 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20 --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf001_no_ld/structure/structure_chr20_maf001_no_ld_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
+ERROR: [31mThere are no valid K values to plot. 
+
+Valid kvals: dict_keys([7])
+Provided kvals: [5]
+Exiting.[0m

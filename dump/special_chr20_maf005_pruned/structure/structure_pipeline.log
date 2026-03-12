@@ -1,0 +1,13 @@
+Skipping fastStructure for K=2 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.2.meanQ already exists
+Skipping fastStructure for K=3 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.3.meanQ already exists
+Skipping fastStructure for K=4 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.4.meanQ already exists
+Skipping fastStructure for K=5 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.5.meanQ already exists
+Skipping fastStructure for K=6 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.6.meanQ already exists
+Skipping fastStructure for K=7 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.7.meanQ already exists
+Skipping fastStructure for K=8 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.8.meanQ already exists
+Skipping fastStructure for K=10 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.10.meanQ already exists
+Skipping fastStructure for K=9 because dump/special_chr20_maf005_pruned/structure/structure_chr20_maf005_pruned_ALL/fS_run_K.9.meanQ already exists
+Running chooseK.py
+Model complexity that maximizes marginal likelihood = 5
+Model components used to explain structure in data = 5
+Pipeline complete. All files are in dump/special_chr20_maf005_pruned/structure/

@@ -1,0 +1,10 @@
+timestamp	method	step	K	elapsed_sec	user_cpu_sec	sys_cpu_sec	max_rss_kb	exit_code	log_file
+2026-03-12 00:10:59	admixture	fit	2	21	20.34	0.03	36588	0	cv_log_K2.out
+2026-03-12 00:11:07	admixture	fit	3	29	28.42	0.05	38308	0	cv_log_K3.out
+2026-03-12 00:11:24	admixture	fit	4	46	46.28	0.05	40460	0	cv_log_K4.out
+2026-03-12 00:11:45	admixture	fit	5	67	67.14	0.07	42020	0	cv_log_K5.out
+2026-03-12 00:13:13	admixture	fit	6	134	134.52	0.02	43804	0	cv_log_K6.out
+2026-03-12 00:13:36	admixture	fit	7	149	149.35	0.05	45740	0	cv_log_K7.out
+2026-03-12 00:14:43	admixture	fit	8	199	198.14	0.16	47452	0	cv_log_K8.out
+2026-03-12 00:16:07	admixture	fit	9	262	261.92	0.16	49596	0	cv_log_K9.out
+2026-03-12 00:18:42	admixture	fit	10	329	328.37	0.10	51528	0	cv_log_K10.out
