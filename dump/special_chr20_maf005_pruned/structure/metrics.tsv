@@ -10,3 +10,4 @@ timestamp	method	step	K	elapsed_sec	user_cpu_sec	sys_cpu_sec	max_rss_kb	exit_cod
 2026-03-12 00:45:39	faststructure	fit	10	748	750.28	0.68	435588	1	dump/special_chr20_maf005_pruned/structure/structure_threader_K10.log
 
 2026-03-12 00:55:55	faststructure	K_selection	all	0	3.13	0.03	29760	0	dump/special_chr20_maf005_pruned/structure/best_K.txt
+2026-03-12 14:42:27	faststructure	K_selection	all	1	3.12	0.03	29760	0	dump/special_chr20_maf005_pruned/structure/best_K.txt

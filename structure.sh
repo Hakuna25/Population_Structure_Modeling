@@ -119,26 +119,37 @@ run_one_k() {
 }
 
 # Run up to THREADS single-threaded jobs in parallel.
-active_jobs=0
 overall_exit_code=0
+declare -A active_pids=()
+
+reap_one_job() {
+    local finished_pid
+
+    if wait -n -p finished_pid; then
+        unset "active_pids[$finished_pid]"
+        return 0
+    fi
+
+    if [[ -n "$finished_pid" ]]; then
+        unset "active_pids[$finished_pid]"
+        overall_exit_code=1
+        return 0
+    fi
+
+    return 1
+}
 
 for K in $KLIST; do
-    run_one_k "$K" &
-    ((active_jobs += 1))
+    while (( ${#active_pids[@]} >= THREADS )); do
+        reap_one_job || break
+    done
 
-    if (( active_jobs >= THREADS )); then
-        if ! wait -n; then
-            overall_exit_code=1
-        fi
-        ((active_jobs -= 1))
-    fi
+    run_one_k "$K" &
+    active_pids[$!]=1
 done
 
-while (( active_jobs > 0 )); do
-    if ! wait -n; then
-        overall_exit_code=1
-    fi
-    ((active_jobs -= 1))
+while (( ${#active_pids[@]} > 0 )); do
+    reap_one_job || break
 done
 
 if [[ "$overall_exit_code" -ne 0 ]]; then

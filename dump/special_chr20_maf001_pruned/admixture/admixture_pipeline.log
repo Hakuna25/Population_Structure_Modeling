@@ -1,7 +1,7 @@
-Skipping ADMIXTURE for K=4 because special_chr20_maf001_pruned_chr20.pruned.4.Q already exists
-Skipping ADMIXTURE for K=3 because special_chr20_maf001_pruned_chr20.pruned.3.Q already exists
 Skipping ADMIXTURE for K=2 because special_chr20_maf001_pruned_chr20.pruned.2.Q already exists
+Skipping ADMIXTURE for K=3 because special_chr20_maf001_pruned_chr20.pruned.3.Q already exists
 Skipping ADMIXTURE for K=5 because special_chr20_maf001_pruned_chr20.pruned.5.Q already exists
+Skipping ADMIXTURE for K=4 because special_chr20_maf001_pruned_chr20.pruned.4.Q already exists
 Skipping ADMIXTURE for K=6 because special_chr20_maf001_pruned_chr20.pruned.6.Q already exists
 Skipping ADMIXTURE for K=7 because special_chr20_maf001_pruned_chr20.pruned.7.Q already exists
 Skipping ADMIXTURE for K=8 because special_chr20_maf001_pruned_chr20.pruned.8.Q already exists
