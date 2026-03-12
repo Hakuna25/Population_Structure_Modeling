@@ -1,0 +1,778 @@
+Running chromosome preprocessing with up to 4 parallel jobs.
+Processing Chromosome 1...
+Skipping VCF normalization for chromosome 1.
+Processing Chromosome 2...
+Skipping VCF normalization for chromosome 2.
+Processing Chromosome 3...
+Processing Chromosome 4...
+Skipping VCF normalization for chromosome 4.
+Skipping VCF normalization for chromosome 3.
+PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr3.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr3
+  --threads 1
+  --vcf 1000Genomes/1000G_chr3_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr2.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr2
+  --threads 1
+  --vcf 1000Genomes/1000G_chr2_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr4.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr4
+  --threads 1
+  --vcf 1000Genomes/1000G_chr4_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr1.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr1
+  --threads 1
+  --vcf 1000Genomes/1000G_chr1_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 2k variants complete.--vcf: 2k variants complete.--vcf: 2k variants complete.--vcf: 2k variants complete.--vcf: 3k variants complete.--vcf: 3k variants complete.--vcf: 3k variants complete.--vcf: 3k variants complete.--vcf: 4k variants complete.--vcf: 4k variants complete.--vcf: 4k variants complete.--vcf: 4k variants complete.--vcf: 5k variants complete.--vcf: 5k variants complete.--vcf: 5k variants complete.--vcf: 5k variants complete.--vcf: 6k variants complete.--vcf: 6k variants complete.--vcf: 6k variants complete.--vcf: 6k variants complete.--vcf: 7k variants complete.--vcf: 7k variants complete.--vcf: 7k variants complete.--vcf: 7k variants complete.--vcf: 8k variants complete.--vcf: 8k variants complete.--vcf: 8k variants complete.--vcf: 9k variants complete.--vcf: 8k variants complete.--vcf: 9k variants complete.--vcf: 9k variants complete.--vcf: 10k variants complete.--vcf: 9k variants complete.--vcf: 10k variants complete.--vcf: 11k variants complete.--vcf: 10k variants complete.--vcf: 10k variants complete.--vcf: 11k variants complete.--vcf: 12k variants complete.--vcf: 11k variants complete.--vcf: 11k variants complete.--vcf: 12k variants complete.--vcf: 13k variants complete.--vcf: 12k variants complete.--vcf: 12k variants complete.--vcf: 13k variants complete.--vcf: 13k variants complete.--vcf: 14k variants complete.--vcf: 13k variants complete.--vcf: 14k variants complete.--vcf: 14k variants complete.--vcf: 15k variants complete.--vcf: 14k variants complete.--vcf: 15k variants complete.--vcf: 15k variants complete.--vcf: 16k variants complete.--vcf: 15k variants complete.--vcf: 16k variants complete.--vcf: 17k variants complete.--vcf: 16k variants complete.--vcf: 16k variants complete.--vcf: 17k variants complete.--vcf: 18k variants complete.--vcf: 17k variants complete.--vcf: 17k variants complete.--vcf: 18k variants complete.--vcf: 18k variants complete.--vcf: 19k variants complete.--vcf: 18k variants complete.--vcf: 19k variants complete.--vcf: 20k variants complete.--vcf: 19k variants complete.--vcf: 19k variants complete.--vcf: 20k variants complete.--vcf: 21k variants complete.--vcf: 20k variants complete.--vcf: 20k variants complete.--vcf: 21k variants complete.--vcf: 22k variants complete.--vcf: 21k variants complete.--vcf: 21k variants complete.--vcf: 22k variants complete.--vcf: 23k variants complete.--vcf: 22k variants complete.--vcf: 22k variants complete.--vcf: 23k variants complete.--vcf: 24k variants complete.--vcf: 23k variants complete.--vcf: 23k variants complete.--vcf: 24k variants complete.--vcf: 25k variants complete.--vcf: 24k variants complete.--vcf: 24k variants complete.--vcf: 25k variants complete.--vcf: 26k variants complete.--vcf: 25k variants complete.--vcf: 25k variants complete.--vcf: 27k variants complete.--vcf: 26k variants complete.--vcf: 26k variants complete.--vcf: 26k variants complete.--vcf: 28k variants complete.--vcf: 27k variants complete.--vcf: 27k variants complete.--vcf: 29k variants complete.--vcf: 27k variants complete.--vcf: 28k variants complete.--vcf: 28k variants complete.--vcf: 30k variants complete.--vcf: 29k variants complete.--vcf: 28k variants complete.--vcf: 31k variants complete.--vcf: 29k variants complete.--vcf: 30k variants complete.--vcf: 29k variants complete.--vcf: 32k variants complete.--vcf: 30k variants complete.--vcf: 31k variants complete.--vcf: 30k variants complete.--vcf: 31k variants complete.--vcf: 33k variants complete.--vcf: 32k variants complete.--vcf: 31k variants complete.--vcf: 32k variants complete.--vcf: 34k variants complete.--vcf: 33k variants complete.--vcf: 32k variants complete.--vcf: 35k variants complete.--vcf: 33k variants complete.--vcf: 34k variants complete.--vcf: 33k variants complete.--vcf: 34k variants complete.--vcf: 35k variants complete.--vcf: 36k variants complete.--vcf: 34k variants complete.--vcf: 35k variants complete.--vcf: 36k variants complete.--vcf: 37k variants complete.--vcf: 35k variants complete.--vcf: 36k variants complete.--vcf: 38k variants complete.--vcf: 37k variants complete.--vcf: 36k variants complete.--vcf: 37k variants complete.--vcf: 38k variants complete.--vcf: 39k variants complete.--vcf: 37k variants complete.--vcf: 40k variants complete.--vcf: 39k variants complete.--vcf: 38k variants complete.--vcf: 38k variants complete.--vcf: 41k variants complete.--vcf: 39k variants complete.--vcf: 40k variants complete.--vcf: 39k variants complete.--vcf: 42k variants complete.--vcf: 40k variants complete.--vcf: 41k variants complete.--vcf: 40k variants complete.--vcf: 43k variants complete.--vcf: 42k variants complete.--vcf: 41k variants complete.--vcf: 41k variants complete.--vcf: 44k variants complete.--vcf: 43k variants complete.--vcf: 42k variants complete.--vcf: 45k variants complete.--vcf: 42k variants complete.--vcf: 44k variants complete.--vcf: 43k variants complete.--vcf: 46k variants complete.--vcf: 43k variants complete.--vcf: 45k variants complete.--vcf: 44k variants complete.--vcf: 47k variants complete.--vcf: 46k variants complete.--vcf: 44k variants complete.--vcf: 45k variants complete.--vcf: 48k variants complete.--vcf: 47k variants complete.--vcf: 45k variants complete.--vcf: 46k variants complete.--vcf: 49k variants complete.--vcf: 48k variants complete.--vcf: 46k variants complete.--vcf: 47k variants complete.--vcf: 49k variants complete.--vcf: 50k variants complete.--vcf: 47k variants complete.--vcf: 48k variants complete.--vcf: 50k variants complete.--vcf: 51k variants complete.--vcf: 48k variants complete.--vcf: 49k variants complete.--vcf: 51k variants complete.--vcf: 52k variants complete.--vcf: 49k variants complete.--vcf: 50k variants complete.--vcf: 52k variants complete.--vcf: 53k variants complete.--vcf: 50k variants complete.--vcf: 51k variants complete.--vcf: 53k variants complete.--vcf: 51k variants complete.--vcf: 54k variants complete.--vcf: 52k variants complete.--vcf: 54k variants complete.--vcf: 55k variants complete.--vcf: 52k variants complete.--vcf: 53k variants complete.--vcf: 55k variants complete.--vcf: 56k variants complete.--vcf: 53k variants complete.--vcf: 56k variants complete.--vcf: 54k variants complete.--vcf: 57k variants complete.--vcf: 54k variants complete.--vcf: 55k variants complete.--vcf: 57k variants complete.--vcf: dump/common/common_chr4-temporary.bed +
+dump/common/common_chr4-temporary.bim + dump/common/common_chr4-temporary.fam
+written.
+54422 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr4.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%--vcf: 58k variants complete.81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999887.
+457 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+53965 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr4.bed + dump/common/common_chr4.bim +
+dump/common/common_chr4.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%--vcf: 56k variants complete.20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%--vcf: 58k variants complete.46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%--vcf: 59k variants complete.87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 57k variants complete.done.
+--vcf: 59k variants complete.--vcf: 60k variants complete.--vcf: 58k variants complete.--vcf: 60k variants complete.--vcf: 61k variants complete.--vcf: 59k variants complete.--vcf: 61k variants complete.Skipping LD pruning for chromosome 4.
+--vcf: dump/common/common_chr3-temporary.bed +
+dump/common/common_chr3-temporary.bim + dump/common/common_chr3-temporary.fam
+written.
+61993 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr3.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%--vcf: 60k variants complete.13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%--vcf: 62k variants complete.91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999894.
+617 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+61376 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr3.bed + dump/common/common_chr3.bim +
+dump/common/common_chr3.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%Processing Chromosome 5...
+Skipping VCF normalization for chromosome 5.
+17%18%19%20%21%22%23%--vcf: 61k variants complete.24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%--vcf: 63k variants complete.62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 62k variants complete.--vcf: 64k variants complete.done.
+--vcf: 63k variants complete.--vcf: 65k variants complete.--vcf: 66k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr5.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr5
+  --threads 1
+  --vcf 1000Genomes/1000G_chr5_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 64k variants complete.--vcf: 67k variants complete.--vcf: 65k variants complete.--vcf: 2k variants complete.--vcf: 68k variants complete.Skipping LD pruning for chromosome 3.
+--vcf: 66k variants complete.--vcf: 3k variants complete.Processing Chromosome 6...
+Skipping VCF normalization for chromosome 6.
+--vcf: 69k variants complete.--vcf: 67k variants complete.--vcf: 4k variants complete.--vcf: 70k variants complete.--vcf: 5k variants complete.--vcf: 68k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr6.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr6
+  --threads 1
+  --vcf 1000Genomes/1000G_chr6_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 71k variants complete.--vcf: 69k variants complete.--vcf: 2k variants complete.--vcf: 6k variants complete.--vcf: 70k variants complete.--vcf: 72k variants complete.--vcf: 3k variants complete.--vcf: 71k variants complete.--vcf: 7k variants complete.--vcf: 72k variants complete.--vcf: 73k variants complete.--vcf: 4k variants complete.--vcf: 8k variants complete.--vcf: 74k variants complete.--vcf: 5k variants complete.--vcf: 73k variants complete.--vcf: 9k variants complete.--vcf: 74k variants complete.--vcf: dump/common/common_chr1-temporary.bed +
+dump/common/common_chr1-temporary.bim + dump/common/common_chr1-temporary.fam
+written.
+74772 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr1.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%--vcf: 6k variants complete.1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%--vcf: 10k variants complete.89%90%91%92%93%94%95%96%97%98%99%--vcf: 75k variants complete. done.
+Total genotyping rate is 0.999926.
+1285 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+73487 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr1.bed + dump/common/common_chr1.bim +
+dump/common/common_chr1.fam ... 0%1%2%3%4%5%6%7%8%--vcf: 7k variants complete.9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%--vcf: 11k variants complete.51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%--vcf: dump/common/common_chr2-temporary.bed +
+dump/common/common_chr2-temporary.bim + dump/common/common_chr2-temporary.fam
+written.
+75787 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr2.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%73%1%74%2%3%75%4%5%76%6%7%77%8%9%78%10%79%--vcf: 8k variants complete.11%12%80%13%14%81%15%16%17%82%18%83%19%20%84%21%85%22%23%86%24%25%87%26%27%88%28%89%29%90%30%31%91%32%92%33%93%34%35%94%36%37%95%38%39%96%40%97%41%42%98%43%44%99%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%--vcf: 12k variants complete.94%95%96%97%98%99% done.
+Total genotyping rate is 0.999893.
+836 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+74951 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr2.bed + dump/common/common_chr2.bim +
+dump/common/common_chr2.fam ... 0%1%2%3%4%5%6%done.
+7%--vcf: 9k variants complete.8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%--vcf: 10k variants complete.--vcf: 13k variants complete.72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 11k variants complete.--vcf: 14k variants complete.done.
+--vcf: 12k variants complete.--vcf: 15k variants complete.Skipping LD pruning for chromosome 1.
+--vcf: 13k variants complete.--vcf: 16k variants complete.Processing Chromosome 7...
+Skipping VCF normalization for chromosome 7.
+--vcf: 14k variants complete.--vcf: 17k variants complete.--vcf: 15k variants complete.Skipping LD pruning for chromosome 2.
+--vcf: 16k variants complete.--vcf: 18k variants complete.--vcf: 17k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr7.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr7
+  --threads 1
+  --vcf 1000Genomes/1000G_chr7_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 19k variants complete.--vcf: 18k variants complete.--vcf: 2k variants complete.Processing Chromosome 8...
+Skipping VCF normalization for chromosome 8.
+--vcf: 20k variants complete.--vcf: 19k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr8.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr8
+  --threads 1
+  --vcf 1000Genomes/1000G_chr8_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 20k variants complete.--vcf: 3k variants complete.--vcf: 21k variants complete.--vcf: 2k variants complete.--vcf: 21k variants complete.--vcf: 4k variants complete.--vcf: 3k variants complete.--vcf: 22k variants complete.--vcf: 22k variants complete.--vcf: 5k variants complete.--vcf: 4k variants complete.--vcf: 23k variants complete.--vcf: 23k variants complete.--vcf: 6k variants complete.--vcf: 5k variants complete.--vcf: 24k variants complete.--vcf: 24k variants complete.--vcf: 7k variants complete.--vcf: 6k variants complete.--vcf: 25k variants complete.--vcf: 25k variants complete.--vcf: 8k variants complete.--vcf: 7k variants complete.--vcf: 26k variants complete.--vcf: 26k variants complete.--vcf: 9k variants complete.--vcf: 8k variants complete.--vcf: 27k variants complete.--vcf: 27k variants complete.--vcf: 10k variants complete.--vcf: 9k variants complete.--vcf: 28k variants complete.--vcf: 28k variants complete.--vcf: 11k variants complete.--vcf: 10k variants complete.--vcf: 29k variants complete.--vcf: 29k variants complete.--vcf: 11k variants complete.--vcf: 12k variants complete.--vcf: 30k variants complete.--vcf: 30k variants complete.--vcf: 13k variants complete.--vcf: 12k variants complete.--vcf: 31k variants complete.--vcf: 31k variants complete.--vcf: 14k variants complete.--vcf: 13k variants complete.--vcf: 32k variants complete.--vcf: 32k variants complete.--vcf: 15k variants complete.--vcf: 14k variants complete.--vcf: 33k variants complete.--vcf: 33k variants complete.--vcf: 16k variants complete.--vcf: 15k variants complete.--vcf: 34k variants complete.--vcf: 34k variants complete.--vcf: 17k variants complete.--vcf: 16k variants complete.--vcf: 35k variants complete.--vcf: 35k variants complete.--vcf: 17k variants complete.--vcf: 18k variants complete.--vcf: 36k variants complete.--vcf: 36k variants complete.--vcf: 18k variants complete.--vcf: 19k variants complete.--vcf: 37k variants complete.--vcf: 37k variants complete.--vcf: 20k variants complete.--vcf: 19k variants complete.--vcf: 38k variants complete.--vcf: 38k variants complete.--vcf: 21k variants complete.--vcf: 20k variants complete.--vcf: 39k variants complete.--vcf: 39k variants complete.--vcf: 21k variants complete.--vcf: 22k variants complete.--vcf: 40k variants complete.--vcf: 40k variants complete.--vcf: 22k variants complete.--vcf: 23k variants complete.--vcf: 41k variants complete.--vcf: 41k variants complete.--vcf: 24k variants complete.--vcf: 23k variants complete.--vcf: 42k variants complete.--vcf: 42k variants complete.--vcf: 25k variants complete.--vcf: 24k variants complete.--vcf: 43k variants complete.--vcf: 43k variants complete.--vcf: 26k variants complete.--vcf: 25k variants complete.--vcf: 44k variants complete.--vcf: 44k variants complete.--vcf: 27k variants complete.--vcf: 26k variants complete.--vcf: 45k variants complete.--vcf: 45k variants complete.--vcf: 28k variants complete.--vcf: 27k variants complete.--vcf: 46k variants complete.--vcf: 46k variants complete.--vcf: 29k variants complete.--vcf: 28k variants complete.--vcf: 47k variants complete.--vcf: 47k variants complete.--vcf: 30k variants complete.--vcf: 29k variants complete.--vcf: 48k variants complete.--vcf: 48k variants complete.--vcf: 31k variants complete.--vcf: 30k variants complete.--vcf: 49k variants complete.--vcf: 49k variants complete.--vcf: 32k variants complete.--vcf: 31k variants complete.--vcf: 50k variants complete.--vcf: 33k variants complete.--vcf: 50k variants complete.--vcf: 32k variants complete.--vcf: 51k variants complete.--vcf: 51k variants complete.--vcf: 34k variants complete.--vcf: 33k variants complete.--vcf: 52k variants complete.--vcf: 34k variants complete.--vcf: 52k variants complete.--vcf: 35k variants complete.--vcf: 53k variants complete.--vcf: 53k variants complete.--vcf: 35k variants complete.--vcf: 36k variants complete.--vcf: 54k variants complete.--vcf: 37k variants complete.--vcf: 36k variants complete.--vcf: 54k variants complete.--vcf: dump/common/common_chr5-temporary.bed +
+dump/common/common_chr5-temporary.bim + dump/common/common_chr5-temporary.fam
+written.
+54226 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr5.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%--vcf: 55k variants complete.52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%--vcf: 37k variants complete.76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 38k variants complete. done.
+Total genotyping rate is 0.999914.
+559 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+53667 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr5.bed + dump/common/common_chr5.bim +
+dump/common/common_chr5.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%--vcf: 56k variants complete.--vcf: 38k variants complete.42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%--vcf: 39k variants complete.86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 57k variants complete.--vcf: 39k variants complete.done.
+--vcf: 40k variants complete.--vcf: 58k variants complete.--vcf: 40k variants complete.--vcf: 41k variants complete.--vcf: 59k variants complete.--vcf: 41k variants complete.--vcf: 42k variants complete.Skipping LD pruning for chromosome 5.
+--vcf: 42k variants complete.--vcf: 60k variants complete.--vcf: 43k variants complete.Processing Chromosome 9...
+Skipping VCF normalization for chromosome 9.
+--vcf: 61k variants complete.--vcf: 43k variants complete.--vcf: 44k variants complete.--vcf: 44k variants complete.--vcf: 62k variants complete.--vcf: 45k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr9.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr9
+  --threads 1
+  --vcf 1000Genomes/1000G_chr9_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: dump/common/common_chr6-temporary.bed +
+dump/common/common_chr6-temporary.bim + dump/common/common_chr6-temporary.fam
+written.
+62018 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr6.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%--vcf: 45k variants complete.30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%--vcf: 46k variants complete.83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 2k variants complete. done.
+Total genotyping rate is 0.99989.
+961 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+61057 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr6.bed + dump/common/common_chr6.bim +
+dump/common/common_chr6.fam ... 0%1%2%3%4%5%6%--vcf: 46k variants complete.7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%--vcf: 47k variants complete.40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%--vcf: 47k variants complete.66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%--vcf: 3k variants complete.81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 48k variants complete.--vcf: 48k variants complete.done.
+--vcf: 4k variants complete.--vcf: 49k variants complete.--vcf: dump/common/common_chr8-temporary.bed +
+dump/common/common_chr8-temporary.bim + dump/common/common_chr8-temporary.fam
+written.
+48616 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr8.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999859.
+440 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+48176 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr8.bed + dump/common/common_chr8.bim +
+dump/common/common_chr8.fam ... 0%1%2%3%4%5%6%7%8%--vcf: 5k variants complete.9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%--vcf: dump/common/common_chr7-temporary.bed +
+dump/common/common_chr7-temporary.bim + dump/common/common_chr7-temporary.fam
+written.
+49662 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr7.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%40%3%4%5%41%6%7%8%42%9%10%11%43%12%13%14%44%15%16%17%45%18%19%20%46%21%22%47%23%24%25%48%26%27%28%49%29%30%31%50%32%33%34%51%35%36%37%38%52%39%40%53%41%42%43%54%44%45%46%55%47%48%49%56%50%51%52%57%53%54%55%58%56%57%58%59%59%60%61%62%60%63%64%61%65%66%67%62%68%69%70%63%71%72%73%64%74%75%65%76%77%78%66%79%80%81%67%82%83%84%68%85%69%86%87%70%88%89%71%90%91%92%72%93%94%95%73%96%97%98%74%99%75%76%77%78%79%80%81%82%83%84%85% done.
+Total genotyping rate is 0.999868.
+746 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+48916 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+86%--make-bed to dump/common/common_chr7.bed + dump/common/common_chr7.bim +
+dump/common/common_chr7.fam ... 0%1%2%87%3%88%4%5%89%6%90%7%91%8%92%9%10%93%--vcf: 6k variants complete.11%94%12%95%13%96%14%97%15%16%98%17%99%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%done.
+73%74%75%76%77%78%79%80%81%82%83%84%85%Skipping LD pruning for chromosome 6.
+86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 7k variants complete.done.
+--vcf: 8k variants complete.Processing Chromosome 10...
+Skipping VCF normalization for chromosome 10.
+--vcf: 9k variants complete.Skipping LD pruning for chromosome 8.
+--vcf: 10k variants complete.--vcf: 11k variants complete.Processing Chromosome 11...
+Skipping VCF normalization for chromosome 11.
+Skipping LD pruning for chromosome 7.
+--vcf: 12k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr10.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr10
+  --threads 1
+  --vcf 1000Genomes/1000G_chr10_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr11.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr11
+  --threads 1
+  --vcf 1000Genomes/1000G_chr11_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.Processing Chromosome 12...
+Skipping VCF normalization for chromosome 12.
+--vcf: 2k variants complete.--vcf: 13k variants complete.--vcf: 3k variants complete.--vcf: 2k variants complete.--vcf: 14k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr12.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr12
+  --threads 1
+  --vcf 1000Genomes/1000G_chr12_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 4k variants complete.--vcf: 3k variants complete.--vcf: 15k variants complete.--vcf: 2k variants complete.--vcf: 4k variants complete.--vcf: 5k variants complete.--vcf: 16k variants complete.--vcf: 3k variants complete.--vcf: 5k variants complete.--vcf: 6k variants complete.--vcf: 17k variants complete.--vcf: 4k variants complete.--vcf: 6k variants complete.--vcf: 7k variants complete.--vcf: 18k variants complete.--vcf: 5k variants complete.--vcf: 7k variants complete.--vcf: 8k variants complete.--vcf: 19k variants complete.--vcf: 6k variants complete.--vcf: 8k variants complete.--vcf: 20k variants complete.--vcf: 9k variants complete.--vcf: 7k variants complete.--vcf: 21k variants complete.--vcf: 9k variants complete.--vcf: 10k variants complete.--vcf: 8k variants complete.--vcf: 22k variants complete.--vcf: 11k variants complete.--vcf: 10k variants complete.--vcf: 9k variants complete.--vcf: 23k variants complete.--vcf: 12k variants complete.--vcf: 11k variants complete.--vcf: 10k variants complete.--vcf: 24k variants complete.--vcf: 13k variants complete.--vcf: 12k variants complete.--vcf: 11k variants complete.--vcf: 25k variants complete.--vcf: 14k variants complete.--vcf: 13k variants complete.--vcf: 12k variants complete.--vcf: 26k variants complete.--vcf: 15k variants complete.--vcf: 14k variants complete.--vcf: 13k variants complete.--vcf: 27k variants complete.--vcf: 16k variants complete.--vcf: 14k variants complete.--vcf: 15k variants complete.--vcf: 28k variants complete.--vcf: 17k variants complete.--vcf: 15k variants complete.--vcf: 16k variants complete.--vcf: 29k variants complete.--vcf: 18k variants complete.--vcf: 16k variants complete.--vcf: 17k variants complete.--vcf: 30k variants complete.--vcf: 19k variants complete.--vcf: 17k variants complete.--vcf: 18k variants complete.--vcf: 31k variants complete.--vcf: 20k variants complete.--vcf: 18k variants complete.--vcf: 19k variants complete.--vcf: 32k variants complete.--vcf: 21k variants complete.--vcf: 19k variants complete.--vcf: 20k variants complete.--vcf: 33k variants complete.--vcf: 22k variants complete.--vcf: 20k variants complete.--vcf: 21k variants complete.--vcf: 34k variants complete.--vcf: 23k variants complete.--vcf: 21k variants complete.--vcf: 22k variants complete.--vcf: 35k variants complete.--vcf: 24k variants complete.--vcf: 23k variants complete.--vcf: 22k variants complete.--vcf: 36k variants complete.--vcf: 25k variants complete.--vcf: 23k variants complete.--vcf: 24k variants complete.--vcf: 26k variants complete.--vcf: 37k variants complete.--vcf: 24k variants complete.--vcf: 25k variants complete.--vcf: 27k variants complete.--vcf: 38k variants complete.--vcf: 25k variants complete.--vcf: 39k variants complete.--vcf: 26k variants complete.--vcf: 28k variants complete.--vcf: 26k variants complete.--vcf: 40k variants complete.--vcf: 27k variants complete.--vcf: 29k variants complete.--vcf: 27k variants complete.--vcf: 41k variants complete.--vcf: 30k variants complete.--vcf: 28k variants complete.--vcf: 28k variants complete.--vcf: 42k variants complete.--vcf: 31k variants complete.--vcf: 29k variants complete.--vcf: dump/common/common_chr9-temporary.bed +
+dump/common/common_chr9-temporary.bim + dump/common/common_chr9-temporary.fam
+written.
+42383 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr9.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%--vcf: 29k variants complete.11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999925.
+390 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+41993 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr9.bed + dump/common/common_chr9.bim +
+dump/common/common_chr9.fam ... 0%1%2%3%4%5%6%7%8%9%10%--vcf: 32k variants complete.11%12%13%14%15%16%--vcf: 30k variants complete.17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%--vcf: 30k variants complete.71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 31k variants complete.--vcf: 33k variants complete.done.
+--vcf: 31k variants complete.--vcf: 32k variants complete.--vcf: 34k variants complete.--vcf: 32k variants complete.--vcf: 33k variants complete.--vcf: 35k variants complete.--vcf: 33k variants complete.Skipping LD pruning for chromosome 9.
+--vcf: 34k variants complete.Processing Chromosome 13...
+Skipping VCF normalization for chromosome 13.
+--vcf: 36k variants complete.--vcf: 34k variants complete.--vcf: 35k variants complete.--vcf: 35k variants complete.--vcf: 37k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr13.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr13
+  --threads 1
+  --vcf 1000Genomes/1000G_chr13_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 36k variants complete.--vcf: 36k variants complete.--vcf: 38k variants complete.--vcf: 37k variants complete.--vcf: 37k variants complete.--vcf: 39k variants complete.--vcf: 2k variants complete.--vcf: 38k variants complete.--vcf: 38k variants complete.--vcf: 40k variants complete.--vcf: 39k variants complete.--vcf: 3k variants complete.--vcf: 41k variants complete.--vcf: 39k variants complete.--vcf: 4k variants complete.--vcf: 40k variants complete.--vcf: 42k variants complete.--vcf: 40k variants complete.--vcf: 5k variants complete.--vcf: 41k variants complete.--vcf: 43k variants complete.--vcf: 41k variants complete.--vcf: 6k variants complete.--vcf: 42k variants complete.--vcf: 44k variants complete.--vcf: 42k variants complete.--vcf: 7k variants complete.--vcf: 43k variants complete.--vcf: 45k variants complete.--vcf: 43k variants complete.--vcf: 8k variants complete.--vcf: 44k variants complete.--vcf: 46k variants complete.--vcf: 44k variants complete.--vcf: 9k variants complete.--vcf: 45k variants complete.--vcf: 47k variants complete.--vcf: 45k variants complete.--vcf: 10k variants complete.--vcf: dump/common/common_chr12-temporary.bed +
+dump/common/common_chr12-temporary.bim + dump/common/common_chr12-temporary.fam
+written.
+45663 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr12.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 48k variants complete. done.
+Total genotyping rate is 0.999905.
+592 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+45071 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr12.bed + dump/common/common_chr12.bim +
+dump/common/common_chr12.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%--vcf: 46k variants complete.36%--vcf: 11k variants complete.37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%--vcf: 49k variants complete.81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: dump/common/common_chr11-temporary.bed +
+dump/common/common_chr11-temporary.bim + dump/common/common_chr11-temporary.fam
+written.
+46518 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr11.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%--vcf: 12k variants complete.8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+--vcf: dump/common/common_chr10-temporary.bed +
+dump/common/common_chr10-temporary.bim + dump/common/common_chr10-temporary.fam
+written.
+49635 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr10.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11% done.
+Total genotyping rate is 0.999906.
+656 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+45862 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+12%13%14%--make-bed to dump/common/common_chr11.bed + dump/common/common_chr11.bim +
+dump/common/common_chr11.fam ... 0%1%15%16%2%17%18%3%19%20%4%21%22%5%23%6%24%25%7%26%27%8%28%29%9%30%31%10%32%33%34%35%36%11%37%38%39%12%40%41%42%13%43%44%14%45%46%47%15%48%49%50%16%51%52%53%17%54%55%56%57%18%58%59%60%19%61%62%63%20%64%65%66%21%67%68%22%69%70%71%72%23%73%74%75%24%76%77%78%25%79%80%81%26%82%83%84%27%85%86%87%88%28%89%90%91%92%29%93%94%95%30%96%97%98%99%31%32%33%34%35%36%37%38%39%40%41%42%43% done.
+Total genotyping rate is 0.999871.
+537 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+49098 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--vcf: 13k variants complete.44%--make-bed to dump/common/common_chr10.bed + dump/common/common_chr10.bim +
+dump/common/common_chr10.fam ... 0%1%45%2%46%3%47%4%48%49%5%50%6%51%7%8%52%9%53%10%54%11%55%12%13%56%14%57%15%58%16%17%59%18%60%19%61%20%62%21%63%22%64%65%23%66%67%68%69%24%70%71%72%25%73%26%74%75%27%76%28%77%29%78%79%30%80%31%81%82%32%83%33%84%85%34%86%35%87%36%88%37%89%38%90%91%39%40%92%93%41%94%42%95%43%96%44%45%97%46%98%47%99%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%Skipping LD pruning for chromosome 12.
+99%--vcf: 14k variants complete.done.
+done.
+--vcf: 15k variants complete.Processing Chromosome 14...
+Skipping VCF normalization for chromosome 14.
+Skipping LD pruning for chromosome 11.
+--vcf: 16k variants complete.--vcf: 17k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr14.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr14
+  --threads 1
+  --vcf 1000Genomes/1000G_chr14_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 18k variants complete.Processing Chromosome 15...
+Skipping VCF normalization for chromosome 15.
+Skipping LD pruning for chromosome 10.
+--vcf: 2k variants complete.--vcf: 19k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr15.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr15
+  --threads 1
+  --vcf 1000Genomes/1000G_chr15_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.Processing Chromosome 16...
+Skipping VCF normalization for chromosome 16.
+--vcf: 20k variants complete.--vcf: 3k variants complete.--vcf: 2k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr16.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr16
+  --threads 1
+  --vcf 1000Genomes/1000G_chr16_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 21k variants complete.--vcf: 2k variants complete.--vcf: 4k variants complete.--vcf: 3k variants complete.--vcf: 3k variants complete.--vcf: 22k variants complete.--vcf: 5k variants complete.--vcf: 4k variants complete.--vcf: 4k variants complete.--vcf: 23k variants complete.--vcf: 6k variants complete.--vcf: 5k variants complete.--vcf: 5k variants complete.--vcf: 24k variants complete.--vcf: 7k variants complete.--vcf: 6k variants complete.--vcf: 6k variants complete.--vcf: 25k variants complete.--vcf: 8k variants complete.--vcf: 7k variants complete.--vcf: 26k variants complete.--vcf: 7k variants complete.--vcf: 9k variants complete.--vcf: 8k variants complete.--vcf: 27k variants complete.--vcf: 8k variants complete.--vcf: 10k variants complete.--vcf: 9k variants complete.--vcf: 28k variants complete.--vcf: 9k variants complete.--vcf: 11k variants complete.--vcf: 10k variants complete.--vcf: 29k variants complete.--vcf: 12k variants complete.--vcf: 10k variants complete.--vcf: 11k variants complete.--vcf: 30k variants complete.--vcf: 13k variants complete.--vcf: 11k variants complete.--vcf: 12k variants complete.--vcf: 31k variants complete.--vcf: 14k variants complete.--vcf: 12k variants complete.--vcf: 13k variants complete.--vcf: 15k variants complete.--vcf: 32k variants complete.--vcf: 13k variants complete.--vcf: 14k variants complete.--vcf: 16k variants complete.--vcf: 33k variants complete.--vcf: 14k variants complete.--vcf: 34k variants complete.--vcf: 17k variants complete.--vcf: 15k variants complete.--vcf: 15k variants complete.--vcf: 18k variants complete.--vcf: 16k variants complete.--vcf: 35k variants complete.--vcf: 16k variants complete.--vcf: 19k variants complete.--vcf: 17k variants complete.--vcf: dump/common/common_chr13-temporary.bed +
+dump/common/common_chr13-temporary.bim + dump/common/common_chr13-temporary.fam
+written.
+35715 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr13.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%--vcf: 17k variants complete.69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999898.
+328 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+35387 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr13.bed + dump/common/common_chr13.bim +
+dump/common/common_chr13.fam ... 0%1%2%3%4%5%6%7%8%9%--vcf: 20k variants complete.10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%--vcf: 18k variants complete.32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%--vcf: 18k variants complete.98%99%--vcf: 21k variants complete.done.
+--vcf: 19k variants complete.--vcf: 19k variants complete.--vcf: 22k variants complete.--vcf: 20k variants complete.--vcf: 20k variants complete.Skipping LD pruning for chromosome 13.
+--vcf: 23k variants complete.--vcf: 21k variants complete.--vcf: 21k variants complete.Processing Chromosome 17...
+Skipping VCF normalization for chromosome 17.
+--vcf: 24k variants complete.--vcf: 22k variants complete.--vcf: 22k variants complete.--vcf: 25k variants complete.--vcf: 23k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr17.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr17
+  --threads 1
+  --vcf 1000Genomes/1000G_chr17_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 26k variants complete.--vcf: 23k variants complete.--vcf: 24k variants complete.--vcf: 2k variants complete.--vcf: 27k variants complete.--vcf: 24k variants complete.--vcf: 28k variants complete.--vcf: 25k variants complete.--vcf: 3k variants complete.--vcf: 25k variants complete.--vcf: 29k variants complete.--vcf: 26k variants complete.--vcf: 4k variants complete.--vcf: 26k variants complete.--vcf: 30k variants complete.--vcf: 27k variants complete.--vcf: 5k variants complete.--vcf: dump/common/common_chr14-temporary.bed +
+dump/common/common_chr14-temporary.bim + dump/common/common_chr14-temporary.fam
+written.
+30307 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr14.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%--vcf: 27k variants complete.70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999891.
+288 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+30019 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr14.bed + dump/common/common_chr14.bim +
+dump/common/common_chr14.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%--vcf: 6k variants complete.70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%--vcf: 28k variants complete.94%95%96%97%98%99%done.
+--vcf: dump/common/common_chr15-temporary.bed +
+dump/common/common_chr15-temporary.bim + dump/common/common_chr15-temporary.fam
+written.
+27867 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr15.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999898.
+298 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+27569 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr15.bed + dump/common/common_chr15.bim +
+dump/common/common_chr15.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%--vcf: 7k variants complete.19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%--vcf: dump/common/common_chr16-temporary.bed +
+dump/common/common_chr16-temporary.bim + dump/common/common_chr16-temporary.fam
+written.
+28801 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr16.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%62%1%2%63%3%64%4%5%65%6%7%66%8%9%67%10%11%68%12%13%69%14%15%70%16%17%71%18%19%72%20%21%73%22%23%74%24%25%75%26%27%76%28%29%77%30%31%78%32%79%33%34%35%80%36%37%81%38%82%39%40%41%83%42%84%43%44%85%45%46%86%47%48%87%49%50%88%51%52%89%53%54%90%55%91%56%57%92%58%59%93%60%61%94%62%63%95%64%96%65%66%97%67%68%98%69%70%99%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 8k variants complete.Skipping LD pruning for chromosome 14.
+ done.
+Total genotyping rate is 0.999885.
+561 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+28240 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr16.bed + dump/common/common_chr16.bim +
+dump/common/common_chr16.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%done.
+29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%Processing Chromosome 18...
+86%Skipping VCF normalization for chromosome 18.
+87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 9k variants complete.done.
+Skipping LD pruning for chromosome 15.
+--vcf: 10k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr18.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr18
+  --threads 1
+  --vcf 1000Genomes/1000G_chr18_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.Processing Chromosome 19...
+Skipping VCF normalization for chromosome 19.
+--vcf: 11k variants complete.--vcf: 2k variants complete.Skipping LD pruning for chromosome 16.
+--vcf: 12k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr19.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr19
+  --threads 1
+  --vcf 1000Genomes/1000G_chr19_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.Processing Chromosome 20...
+Skipping VCF normalization for chromosome 20.
+--vcf: 13k variants complete.--vcf: 2k variants complete.--vcf: 3k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr20.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr20
+  --threads 1
+  --vcf 1000Genomes/1000G_chr20_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 14k variants complete.--vcf: 3k variants complete.--vcf: 2k variants complete.--vcf: 4k variants complete.--vcf: 15k variants complete.--vcf: 4k variants complete.--vcf: 3k variants complete.--vcf: 16k variants complete.--vcf: 5k variants complete.--vcf: 5k variants complete.--vcf: 4k variants complete.--vcf: 17k variants complete.--vcf: 6k variants complete.--vcf: 6k variants complete.--vcf: 5k variants complete.--vcf: 18k variants complete.--vcf: 7k variants complete.--vcf: 7k variants complete.--vcf: 6k variants complete.--vcf: 19k variants complete.--vcf: 8k variants complete.--vcf: 7k variants complete.--vcf: 8k variants complete.--vcf: 20k variants complete.--vcf: 9k variants complete.--vcf: 8k variants complete.--vcf: 9k variants complete.--vcf: 21k variants complete.--vcf: 10k variants complete.--vcf: 10k variants complete.--vcf: 9k variants complete.--vcf: 22k variants complete.--vcf: 11k variants complete.--vcf: 11k variants complete.--vcf: 10k variants complete.--vcf: 23k variants complete.--vcf: 12k variants complete.--vcf: 11k variants complete.--vcf: 12k variants complete.--vcf: 24k variants complete.--vcf: 13k variants complete.--vcf: 12k variants complete.--vcf: 13k variants complete.--vcf: 25k variants complete.--vcf: dump/common/common_chr17-temporary.bed +
+dump/common/common_chr17-temporary.bim + dump/common/common_chr17-temporary.fam
+written.
+25242 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr17.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%--vcf: 14k variants complete.36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%--vcf: 13k variants complete.69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.99989.
+607 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+24635 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr17.bed + dump/common/common_chr17.bim +
+dump/common/common_chr17.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%--vcf: 14k variants complete.31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 15k variants complete.done.
+--vcf: 14k variants complete.--vcf: 15k variants complete.--vcf: 16k variants complete.--vcf: 15k variants complete.--vcf: 16k variants complete.Skipping LD pruning for chromosome 17.
+--vcf: 16k variants complete.--vcf: 17k variants complete.--vcf: 17k variants complete.Processing Chromosome 21...
+Skipping VCF normalization for chromosome 21.
+--vcf: 17k variants complete.--vcf: dump/common/common_chr19-temporary.bed +
+dump/common/common_chr19-temporary.bim + dump/common/common_chr19-temporary.fam
+written.
+17784 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr19.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%--vcf: 18k variants complete.75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999899.
+532 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+17252 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr19.bed + dump/common/common_chr19.bim +
+dump/common/common_chr19.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 18k variants complete.done.
+--vcf: 19k variants complete.PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr21.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr21
+  --threads 1
+  --vcf 1000Genomes/1000G_chr21_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.--vcf: 19k variants complete.--vcf: 20k variants complete.--vcf: 2k variants complete.--vcf: 20k variants complete.Skipping LD pruning for chromosome 19.
+--vcf: 3k variants complete.--vcf: 21k variants complete.Processing Chromosome 22...
+Skipping VCF normalization for chromosome 22.
+--vcf: 21k variants complete.--vcf: 4k variants complete.--vcf: 22k variants complete.--vcf: 22k variants complete.--vcf: 23k variants complete.--vcf: 5k variants complete.--vcf: 23k variants complete.--vcf: 24k variants complete.--vcf: dump/common/common_chr20-temporary.bed +
+dump/common/common_chr20-temporary.bim + dump/common/common_chr20-temporary.fam
+written.
+23377 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr20.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999918.
+220 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+23157 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr20.bed + dump/common/common_chr20.bim +
+dump/common/common_chr20.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_chr22.log.
+Options in effect:
+  --double-id
+  --keep dump/common/common_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/common/common_chr22
+  --threads 1
+  --vcf 1000Genomes/1000G_chr22_pruned.vcf.gz
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf: 1k variants complete.24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%--vcf: 25k variants complete.71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 6k variants complete.done.
+--vcf: 26k variants complete.--vcf: 2k variants complete.--vcf: 7k variants complete.Skipping LD pruning for chromosome 20.
+--vcf: 27k variants complete.--vcf: 3k variants complete.--vcf: 8k variants complete.--vcf: dump/common/common_chr18-temporary.bed +
+dump/common/common_chr18-temporary.bim + dump/common/common_chr18-temporary.fam
+written.
+27626 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr18.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999893.
+165 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+27461 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr18.bed + dump/common/common_chr18.bim +
+dump/common/common_chr18.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 4k variants complete.--vcf: 9k variants complete.done.
+--vcf: 5k variants complete.--vcf: 10k variants complete.Skipping LD pruning for chromosome 18.
+--vcf: 6k variants complete.--vcf: 11k variants complete.--vcf: 7k variants complete.--vcf: 12k variants complete.--vcf: 8k variants complete.--vcf: 13k variants complete.--vcf: dump/common/common_chr21-temporary.bed +
+dump/common/common_chr21-temporary.bim + dump/common/common_chr21-temporary.fam
+written.
+13176 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr21.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999882.
+121 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+13055 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr21.bed + dump/common/common_chr21.bim +
+dump/common/common_chr21.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%--vcf: 9k variants complete.done.
+Skipping LD pruning for chromosome 21.
+--vcf: 10k variants complete.--vcf: 11k variants complete.--vcf: 12k variants complete.--vcf: 13k variants complete.--vcf: dump/common/common_chr22-temporary.bed +
+dump/common/common_chr22-temporary.bim + dump/common/common_chr22-temporary.fam
+written.
+13629 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_chr22.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999934.
+242 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+13387 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_chr22.bed + dump/common/common_chr22.bim +
+dump/common/common_chr22.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+Skipping LD pruning for chromosome 22.
+Creating merge list...
+PLINK v1.9.0-b.8 64-bit (22 Oct 2024)              cog-genomics.org/plink/1.9/
+(C) 2005-2024 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to dump/common/common_ALL.pruned.log.
+Options in effect:
+  --bfile dump/common/common_chr1.pruned
+  --make-bed
+  --merge-list dump/common/mergelist.txt
+  --out dump/common/common_ALL.pruned
+  --threads 4
+
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+Warning: Variants '19:41363301:T:C' and '19:41363301:A:C' have the same
+position.
+Performing single-pass merge (2504 people, 897781 variants).
+Pass 1: fileset #1 complete.Pass 1: fileset #2 complete.Pass 1: fileset #3 complete.Pass 1: fileset #4 complete.Pass 1: fileset #5 complete.Pass 1: fileset #6 complete.Pass 1: fileset #7 complete.Pass 1: fileset #8 complete.Pass 1: fileset #9 complete.Pass 1: fileset #10 complete.Pass 1: fileset #11 complete.Pass 1: fileset #12 complete.Pass 1: fileset #13 complete.Pass 1: fileset #14 complete.Pass 1: fileset #15 complete.Pass 1: fileset #16 complete.Pass 1: fileset #17 complete.Pass 1: fileset #18 complete.Pass 1: fileset #19 complete.Pass 1: fileset #20 complete.Pass 1: fileset #21 complete.                                              Merged fileset written to dump/common/common_ALL.pruned-merge.bed +
+dump/common/common_ALL.pruned-merge.bim +
+dump/common/common_ALL.pruned-merge.fam .
+897781 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to dump/common/common_ALL.pruned.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+Total genotyping rate is 0.999895.
+897781 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dump/common/common_ALL.pruned.bed +
+dump/common/common_ALL.pruned.bim + dump/common/common_ALL.pruned.fam ... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.

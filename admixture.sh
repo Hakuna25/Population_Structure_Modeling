@@ -56,6 +56,16 @@ pushd "$OUT_DIR" >/dev/null
 run_one_k() {
     local K="$1"
     local fit_exit_code=0
+    local q_matches=()
+
+    shopt -s nullglob
+    q_matches=( *.${K}.Q )
+    shopt -u nullglob
+
+    if (( ${#q_matches[@]} > 0 )); then
+        echo "Skipping ADMIXTURE for K=$K because ${q_matches[0]} already exists"
+        return 0
+    fi
 
     echo "Running ADMIXTURE for K=$K"
     if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
@@ -101,7 +111,11 @@ if [[ "$overall_exit_code" -ne 0 ]]; then
 fi
 
 # Extract CV results for easy viewing
-grep "CV error" cv_log_K*.out | sed 's/cv_log_K\(.*\).out:CV error (K=\(.*\)): \(.*\)/\2 \3/' | sort -n > cv_results.txt
+if [[ -f "cv_results.txt" ]]; then
+    echo "Skipping CV summary because $OUT_DIR/cv_results.txt already exists"
+else
+    grep "CV error" cv_log_K*.out | sed 's/cv_log_K\(.*\).out:CV error (K=\(.*\)): \(.*\)/\2 \3/' | sort -n > cv_results.txt
+fi
 
 popd >/dev/null
 

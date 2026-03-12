@@ -66,17 +66,31 @@ if ! [[ "$THREADS" =~ ^[1-9][0-9]*$ ]]; then
     exit 2
 fi
 
+RESULT_DIR="$OUT_DIR/${PREFIX}_ALL"
+if [[ -e "$RESULT_DIR" && ! -d "$RESULT_DIR" ]]; then
+    echo "ERROR: fastStructure result path exists and is not a directory: $RESULT_DIR"
+    exit 2
+fi
+mkdir -p "$RESULT_DIR"
+
 run_one_k() {
     local K="$1"
     local fit_exit_code=0
+    local meanq_file
+
+    meanq_file="$RESULT_DIR/fS_run_K.${K}.meanQ"
+    if [[ -f "$meanq_file" ]]; then
+        echo "Skipping fastStructure for K=$K because $meanq_file already exists"
+        return 0
+    fi
 
     echo "Running fastStructure for K=$K"
     if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
         benchmark_run "$METRICS_FILE" "faststructure" "fit" "$K" "$OUT_DIR/structure_threader_K${K}.log" \
-            "$STRUCTURE_THREADER_BIN" run -Klist "$K" -R "$REPLICATES" -i "$INPUT_BED" -o "$OUT_DIR/${PREFIX}_ALL" -t 1 --ind "$IND_FILE" --seed "$RANDOM_SEED" -fs "$FASTSTRUCTURE_BIN"
+            "$STRUCTURE_THREADER_BIN" run -Klist "$K" -R "$REPLICATES" -i "$INPUT_BED" -o "$RESULT_DIR" -t 1 --ind "$IND_FILE" --seed "$RANDOM_SEED" -fs "$FASTSTRUCTURE_BIN"
         fit_exit_code=$?
     else
-        "$STRUCTURE_THREADER_BIN" run -Klist "$K" -R "$REPLICATES" -i "$INPUT_BED" -o "$OUT_DIR/${PREFIX}_ALL" -t 1 --ind "$IND_FILE" --seed "$RANDOM_SEED" -fs "$FASTSTRUCTURE_BIN"
+        "$STRUCTURE_THREADER_BIN" run -Klist "$K" -R "$REPLICATES" -i "$INPUT_BED" -o "$RESULT_DIR" -t 1 --ind "$IND_FILE" --seed "$RANDOM_SEED" -fs "$FASTSTRUCTURE_BIN"
         fit_exit_code=$?
     fi
 
@@ -115,12 +129,16 @@ fi
 
 #  K_selection summary for fastStructure
 if command -v chooseK.py >/dev/null 2>&1; then
-    echo "Running chooseK.py"
-    if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
-        benchmark_run "$METRICS_FILE" "faststructure" "K_selection" "all" "$OUT_DIR/best_K.txt" \
-            chooseK.py --input="$OUT_DIR/${PREFIX}_ALL/fS_run_K"
+    if [[ -f "$OUT_DIR/best_K.txt" ]]; then
+        echo "Skipping chooseK.py because $OUT_DIR/best_K.txt already exists"
     else
-        chooseK.py --input="$OUT_DIR/${PREFIX}_ALL/fS_run_K" | tee "$OUT_DIR/best_K.txt"
+        echo "Running chooseK.py"
+        if [[ "$BENCHMARK_ENABLED" == "1" ]]; then
+            benchmark_run "$METRICS_FILE" "faststructure" "K_selection" "all" "$OUT_DIR/best_K.txt" \
+                chooseK.py --input="$RESULT_DIR/fS_run_K"
+        else
+            chooseK.py --input="$RESULT_DIR/fS_run_K" | tee "$OUT_DIR/best_K.txt"
+        fi
     fi
 else
     echo "chooseK.py not found. Skipping model selection summary."
