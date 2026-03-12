@@ -61,6 +61,11 @@ if [[ -z "$STRUCTURE_THREADER_BIN" || ! -x "$STRUCTURE_THREADER_BIN" ]]; then
     exit 1
 fi
 
+if ! [[ "$THREADS" =~ ^[1-9][0-9]*$ ]]; then
+    echo "ERROR: THREADS must be a positive integer, got: $THREADS"
+    exit 2
+fi
+
 run_one_k() {
     local K="$1"
     local fit_exit_code=0
@@ -81,22 +86,27 @@ run_one_k() {
     return "$fit_exit_code"
 }
 
-# Run one single-threaded job per K in parallel.
-declare -a job_pids=()
-declare -a job_ks=()
+# Run up to THREADS single-threaded jobs in parallel.
+active_jobs=0
+overall_exit_code=0
 
 for K in $KLIST; do
     run_one_k "$K" &
-    job_pids+=("$!")
-    job_ks+=("$K")
+    ((active_jobs += 1))
+
+    if (( active_jobs >= THREADS )); then
+        if ! wait -n; then
+            overall_exit_code=1
+        fi
+        ((active_jobs -= 1))
+    fi
 done
 
-overall_exit_code=0
-for i in "${!job_pids[@]}"; do
-    if ! wait "${job_pids[$i]}"; then
+while (( active_jobs > 0 )); do
+    if ! wait -n; then
         overall_exit_code=1
-        echo "ERROR: fastStructure background job failed for K=${job_ks[$i]}"
     fi
+    ((active_jobs -= 1))
 done
 
 if [[ "$overall_exit_code" -ne 0 ]]; then
