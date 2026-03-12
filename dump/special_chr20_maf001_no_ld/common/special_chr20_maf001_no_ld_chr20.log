@@ -1,0 +1,45 @@
+PLINK v1.9.0-b.8 64-bit (22 Oct 2024)
+Options in effect:
+  --double-id
+  --keep dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_samples.txt
+  --keep-allele-order
+  --maf 0.01
+  --make-bed
+  --out dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20
+  --snps-only just-acgt
+  --threads 1
+  --vcf dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20_dedup.vcf.gz
+
+Hostname: jlwu
+Working directory: /home/wjl/Population_Structure_Modeling
+Start time: Wed Mar 11 21:43:00 2026
+
+Random number seed: 1773290580
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+--vcf:
+dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20-temporary.bed
++
+dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20-temporary.bim
++
+dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20-temporary.fam
+written.
+1745527 out of 1811256 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20.nosex .
+--keep: 2504 people remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is exactly 1.
+1477883 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+267644 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20.bed +
+dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20.bim +
+dump/special_chr20_maf001_no_ld/common/special_chr20_maf001_no_ld_chr20.fam ...
+done.
+
+End time: Wed Mar 11 21:43:41 2026

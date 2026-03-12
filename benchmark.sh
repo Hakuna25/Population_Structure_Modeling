@@ -3,7 +3,7 @@
 init_metrics_file() {
     local metrics_file="$1"
     local metrics_dir
-    local reset_metrics="${BENCHMARK_RESET_METRICS:-1}"
+    local reset_metrics="${BENCHMARK_RESET_METRICS:-0}"
     metrics_dir="$(dirname "$metrics_file")"
     mkdir -p "$metrics_dir"
 
@@ -21,7 +21,7 @@ append_metrics_row() {
         sleep 0.1
     done
 
-    printf "%s" "$row" >> "$metrics_file"
+    printf "%s\n" "$row" >> "$metrics_file"
     rmdir "$lock_dir"
 }
 
