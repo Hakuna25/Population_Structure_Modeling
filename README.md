@@ -119,12 +119,6 @@ The detailed current results are shown in `analysis.ipynb`, here is a brief summ
 
 - AMR shows complex multi-component ancestry in both methods, consistent with admixed population history.
 
-## Remaining Work and Challenges
-- [ ] Conduct experiment on more random seeds (e.g. 1, 42, 284, 2026) and provide corresponding error bars across trials, to remove the impacts brought by initialzation, and to better evaluate the stability of the results.
-- [ ] Have a further investigation on other works in global ancestry inference, and introduce more measures to better compare different methods from other perspectives.
-- [ ] Consider more fine-grained label beyond superpopulations, e.g. the population label.
-- [ ] Make the plots more pretty, e.g. adjust the plot to ensure the same color consistently corresponds to the same population.
-
 ## Citation
 ```bibtex
 @article{alexander2009fast,
