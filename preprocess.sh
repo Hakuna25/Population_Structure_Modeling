@@ -202,7 +202,7 @@ process_chromosome() {
     if [[ "$SKIP_NORMALIZE" == "1" ]]; then
         echo "Skipping VCF normalization for chromosome $chr_number."
     else
-        "$BCFTOOLS_BIN" norm --threads 1 -f "$REF_FA" -m -any -d exact -Oz -o "$dedup_vcf" "$vcf"
+        "$BCFTOOLS_BIN" norm --threads 1 -f "$REF_FA" -m -any -d all -Oz -o "$dedup_vcf" "$vcf"
         vcf_for_plink="$dedup_vcf"
     fi
 
