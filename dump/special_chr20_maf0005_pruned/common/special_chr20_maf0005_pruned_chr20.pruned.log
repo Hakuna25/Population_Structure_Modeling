@@ -1,0 +1,35 @@
+PLINK v1.9.0-b.8 64-bit (22 Oct 2024)
+Options in effect:
+  --bfile dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20
+  --extract dump/special_chr20_maf0005_pruned/common/tmp_chr20.prune.in
+  --make-bed
+  --out dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned
+  --threads 1
+
+Hostname: jlwu
+Working directory: /home/wjl/Population_Structure_Modeling
+Start time: Thu Mar 12 17:02:06 2026
+
+Random number seed: 1773360126
+15544 MB RAM detected; reserving 7772 MB for main workspace.
+342817 variants loaded from .bim file.
+2504 people (0 males, 0 females, 2504 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned.nosex
+.
+--extract: 67555 variants remaining.
+Using 1 thread.
+Before main variant filters, 2504 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is exactly 1.
+67555 variants and 2504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned.bed
++
+dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned.bim
++
+dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned.fam
+... done.
+
+End time: Thu Mar 12 17:02:06 2026
