@@ -107,11 +107,11 @@ Each row in `metrics.tsv` contains:
 ## 📊 Current Results
 The detailed current results are shown in `analysis.ipynb`, here is a brief summary:
 
-- For ADMIXTURE, the cross-validation (CV) error drops quickly for small K=5 as the best clustering resolution for this dataset. For fastSTRUCTURE, the marginal likelihood shows a clear peak and elbow around K=5-6, indicating a similar estimate of the underlying number of clusters.
+- For ADMIXTURE, the cross-validation (CV) error drops quickly for small K=5 as the best clustering resolution for this dataset. For fastSTRUCTURE, the marginal likelihood shows a clear peak and elbow at K=7, indicating a similar estimate of the underlying number of clusters.
 
-- Both methods successfully identify the major continental clusters corresponding to the 1000 Genomes super-populations (AFR, AMR, EAS, EUR, SAS).
+- Both methods successfully identify the major continental clusters corresponding to the 1000 Genomes super-populations (AFR, AMR, EAS, EUR, SAS). fastSTRUCTURE tends to produce **cleaner** looking plots with less background noise.
 
-- ADMIXTURE runs faster but uses more memory; the average runtime is 810 s for ADMIXTURE versus 2114 s for fastSTRUCTURE.
+- fastSTRUCTURE is substantially faster than ADMIXTURE for all tested K values. While ADMIXTURE’s runtime increases sharply as K grows—reaching over 14 hours at K=10—fastSTRUCTURE remains consistently below ~1.5 hours even at its peak. There show the Splitter Effect when increasing K.
 
 - Both methods achieve high superpopulation assignment, with EUR, EAS, and SAS near 100% accuracy.
 
