@@ -1,0 +1,5 @@
+INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 7 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
+INFO: [32m
+==============================
+[0m
+INFO: [32mAll 1 jobs finished successfully.[0m
