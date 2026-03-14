@@ -45,7 +45,7 @@ If you want to skip the computation and dive straight into the findings:
 - Open `analysis_setting_2.ipynb` for comparison on chromosome 20 with different MAF thresholds and LD pruning strategies.
 
 ## 🧬 Data and assets
-[1000 Genomes Phase 3 Data](https://www.nature.com/articles/nature15393) is a comprehensive release of the 1000 Genomes Project dataset, providing whole-genome sequencing–based variant calls for 2,504 individuals from 26 populations across five continental groups. In this project, we focus on autosomal biallelic SNPs and use an LD-pruned version of the autosomal data.
+[1000 Genomes Phase 3 Data](https://www.nature.com/articles/nature15393) is a comprehensive release of the 1000 Genomes Project dataset, providing whole-genome sequencing–based variant calls for 2,504 individuals from 26 populations across five continental groups. 
 
 For reproducibility, please place all input 1000 Genomes files in `1000Genomes/`.
 For detailed download instructions and expected filenames, see [1000Genomes/README.md](https://github.com/Hakuna25/Population_Structure_Modeling/blob/main/1000Genomes/README.md).
@@ -61,8 +61,7 @@ Follow these steps to reproduce the environment and the full analysis from scrat
 2. Place 1000 Genomes input files in `1000Genomes/`.
 3. Edit `pipeline.conf` for config. 
 4. Open `analysis_setting_1.ipynb` or `analysis_setting_2.ipynb` for whole pipeline.
-5. Run `admixture.sh` or `structure.sh`; both scripts consume the shared `dump/common/common_ALL.pruned.*` outputs directly.
- We’ve already provided the preprocessed, merged 1000 Genomes Phase 3 chromosome dataset in `dump/`, so you can run the tools directly. If you’re interested, you can also reproduce the preprocessing steps using the snippets included in the code.
+
 
 ### Additional Notes
 - `preprocess.sh` contains the shared preprocessing steps:
