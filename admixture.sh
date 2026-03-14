@@ -63,8 +63,13 @@ run_one_k() {
     shopt -u nullglob
 
     if (( ${#q_matches[@]} > 0 )); then
-        echo "Skipping ADMIXTURE for K=$K because ${q_matches[0]} already exists"
-        return 0
+        if [[ "$FORCE_RERUN" == "1" ]]; then
+            echo "FORCE_RERUN=1: rerun existing ADMIXTURE outputs for K=$K: ${q_matches[*]}"
+            rm -f cv_log_K${K}.out
+        else
+            echo "Skipping ADMIXTURE for K=$K because ${q_matches[0]} already exists"
+            return 0
+        fi
     fi
 
     echo "Running ADMIXTURE for K=$K"

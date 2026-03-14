@@ -81,8 +81,12 @@ run_one_k() {
 
     meanq_file="$RESULT_DIR/fS_run_K.${K}.meanQ"
     if [[ -f "$meanq_file" ]]; then
-        echo "Skipping fastStructure for K=$K because $meanq_file already exists"
-        return 0
+        if [[ "$FORCE_RERUN" == "1" ]]; then
+            echo "FORCE_RERUN=1: rerun existing fastStructure meanQ for K=$K: $meanq_file"
+        else
+            echo "Skipping fastStructure for K=$K because $meanq_file already exists"
+            return 0
+        fi
     fi
 
     # Disable structure_threader's internal bestK tests and plotting.
