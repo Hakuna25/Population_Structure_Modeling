@@ -5,7 +5,7 @@ Skipping ADMIXTURE for K=5 because special_chr20_maf001_no_ld_chr20.5.Q already 
 Skipping ADMIXTURE for K=6 because special_chr20_maf001_no_ld_chr20.6.Q already exists
 Skipping ADMIXTURE for K=7 because special_chr20_maf001_no_ld_chr20.7.Q already exists
 Skipping ADMIXTURE for K=8 because special_chr20_maf001_no_ld_chr20.8.Q already exists
-Skipping ADMIXTURE for K=10 because special_chr20_maf001_no_ld_chr20.10.Q already exists
 Skipping ADMIXTURE for K=9 because special_chr20_maf001_no_ld_chr20.9.Q already exists
+Skipping ADMIXTURE for K=10 because special_chr20_maf001_no_ld_chr20.10.Q already exists
 Skipping CV summary because dump/special_chr20_maf001_no_ld/admixture/cv_results.txt already exists
 Pipeline complete. Results and logs are in dump/special_chr20_maf001_no_ld/admixture/
