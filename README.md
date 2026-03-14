@@ -78,7 +78,6 @@ Follow these steps to reproduce the environment and the full analysis from scrat
 - The reference FASTA path is controlled by `REF_FA` in `pipeline.conf`. If the FASTA is missing, `preprocess.sh` downloads `human_g1k_v37.fasta.gz`, repairs the archive with `truncate` when needed, decompresses it to `human_g1k_v37.fasta`, and rebuilds the `.fai` index locally with `samtools faidx`.
 - Chromosome preprocessing parallelism is controlled by `PREPROCESS_THREADS` in `pipeline.conf` or `preprocess.sh --threads`; this sets how many chromosome jobs run concurrently.
 
-- `bash test.sh` provides a quick test for the environment setup and method implementation. Test outputs are written to `dump/test/`.
 
 ## ⚡ Runtime & Memory Benchmarking
 Both pipelines support built-in benchmarking (wall-clock runtime + peak memory usage).
@@ -133,6 +132,18 @@ Whole-autosome K-value exploration:
 Whole-autosome population structure:
 ![Whole-autosome ancestry panels](plots/dump_admixture_combined_membership_panels.png)
 
+Whole-autosome time and memory:
+
+| Method | Total fit time across `K=2..10` | Mean fit time per K | Peak RSS |
+| --- | ---: | ---: | ---: |
+| ADMIXTURE | 267,246 s | 29,694 s | 6.19 GB |
+| fastSTRUCTURE | 158,028 s | 17,559 s | 3.95 GB |
+
+- fastSTRUCTURE is clearly more memory efficient on the whole-autosome benchmark: its peak memory stays between about `2.57 GB` and `3.95 GB`, versus `4.76 GB` to `6.19 GB` for ADMIXTURE, or roughly `54%` to `64%` of ADMIXTURE's memory footprint across the tested `K` values.
+- Runtime is more nuanced than the memory story. fastSTRUCTURE is faster overall in aggregate, reducing total fit time by about `41%`, but it is not uniformly faster at every `K`: in this run it is slower than ADMIXTURE at `K=3-5`, with the largest slowdown at `K=4` (`22,612 s` vs `10,560 s`).
+- At larger `K`, the trend reverses strongly in fastSTRUCTURE's favor. The biggest speedup appears at `K=10`, where fastSTRUCTURE needs `11,975 s` compared with `58,395 s` for ADMIXTURE, and ADMIXTURE also shows pronounced runtime jumps at `K=6` and `K=8-10`.
+
+![Whole-autosome runtime and memory vs K](plots/all_autosomes_runtime_memory_vs_k.png)
 
 #### Bonus Evaluation (Not in report)
 | Evaluation on whole autosomes | ADMIXTURE | fastSTRUCTURE |
@@ -143,26 +154,12 @@ Whole-autosome population structure:
 
 - EAS and EUR are essentially perfect under the hard-assignment evaluation, AFR is above 99% for both methods, and AMR is the hardest group because many samples split between AMR and EUR components.
 - The per-super-population Brier scores show the same pattern: AMR is by far the most difficult class (`0.76408` for ADMIXTURE, `0.80059` for fastSTRUCTURE), while EAS, EUR, and SAS are modeled much more cleanly.
-- Runtime differs dramatically on the whole dataset: ADMIXTURE needs `267,246` seconds in total across `K=2..10` with a peak RSS of `6.19 GB`, whereas fastSTRUCTURE completes its `K=2..10` sweep in `4,330` seconds with a peak RSS of about `482 MB`.
 - As `K` increases, both methods show the same high-level continental backbone, but ADMIXTURE shows a more visible "splitter effect" and finer within-region fragmentation.
 
 
 ### Setting 2: chromosome 20 quality-control sensitivity
 
 The setting compares four QC configurations and shows that LD pruning and MAF thresholds strongly affect the computational cost while preserving the main continental structure.
-
-| Chr20 setting | SNPs | ADMIXTURE mean fit time / peak RSS | fastSTRUCTURE mean fit time / peak RSS | fastSTRUCTURE `chooseK` |
-| --- | ---: | ---: | ---: | ---: |
-| `MAF=0.005 + LD prune` | 67,555 | 1517.7 s / 480.7 MB | 1439.9 s / 351.5 MB | 6 |
-| `MAF=0.01 + LD prune` | 32,319 | 801.8 s / 233.9 MB | 784.4 s / 424.4 MB | 6 |
-| `MAF=0.05 + LD prune` | 6,021 | 137.3 s / 50.3 MB | 416.7 s / 425.4 MB | 5 |
-| `MAF=0.01 without LD prune` | 267,644 | 6997.8 s / 1885.8 MB | 6079.3 s / 1292.6 MB | 5 |
-
-- Removing LD pruning is the most expensive choice for both methods: compared with `MAF=0.01 + LD prune`, the SNP count jumps from `32,319` to `267,644`, and both runtime and memory increase sharply.
-- Raising the MAF threshold to `0.05` makes the problem much smaller and especially benefits ADMIXTURE, but the population structure visualization panels become visibly coarser because only `6,021` SNPs remain.
-- Lowering the MAF threshold to `0.005` keeps more rare variation (`67,555` SNPs) and yields panels close to the whole-autosome analysis, with slightly more fine-scale heterogeneity, especially in ADMIXTURE.
-- Across all four Chr20 settings, ADMIXTURE CV tends to keep decreasing slightly toward larger `K`, while fastSTRUCTURE peaks earlier and more stably at `K=5` or `K=6`, so the practical resolution remains around the same range as the whole-genome experiment.
-- In the fastSTRUCTURE memory plot, `MAF=0.01 + LD prune` and `MAF=0.05 + LD prune` are visually the closest pair: from `K=3` onward the two curves are nearly on top of each other, with differences as small as `0.02 MB` and an average gap of about `10.48 MB` across `K=2..10`.
 
 Chr20 population structure:
 
@@ -185,6 +182,19 @@ Chr20 population structure:
 `K-selection curves across the four Chr20 settings`
 
 ![Chr20 CV and marginal-likelihood curves](plots/cv_ml_vs_k.png)
+
+| Chr20 setting | SNPs | ADMIXTURE mean fit time / peak RSS | fastSTRUCTURE mean fit time / peak RSS | fastSTRUCTURE `chooseK` |
+| --- | ---: | ---: | ---: | ---: |
+| `MAF=0.005 + LD prune` | 67,555 | 1517.7 s / 480.7 MB | 1439.9 s / 351.5 MB | 6 |
+| `MAF=0.01 + LD prune` | 32,319 | 801.8 s / 233.9 MB | 784.4 s / 424.4 MB | 6 |
+| `MAF=0.05 + LD prune` | 6,021 | 137.3 s / 50.3 MB | 416.7 s / 425.4 MB | 5 |
+| `MAF=0.01 without LD prune` | 267,644 | 6997.8 s / 1885.8 MB | 6079.3 s / 1292.6 MB | 5 |
+
+- Removing LD pruning is the most expensive choice for both methods: compared with `MAF=0.01 + LD prune`, the SNP count jumps from `32,319` to `267,644`, and both runtime and memory increase sharply.
+- Raising the MAF threshold to `0.05` makes the problem much smaller and especially benefits ADMIXTURE, but the population structure visualization panels become visibly coarser because only `6,021` SNPs remain.
+- Lowering the MAF threshold to `0.005` keeps more rare variation (`67,555` SNPs) and yields panels close to the whole-autosome analysis, with slightly more fine-scale heterogeneity, especially in ADMIXTURE.
+- Across all four Chr20 settings, ADMIXTURE CV tends to keep decreasing slightly toward larger `K`, while fastSTRUCTURE peaks earlier and more stably at `K=5` or `K=6`, so the practical resolution remains around the same range as the whole-genome experiment.
+- In the fastSTRUCTURE memory plot, `MAF=0.01 + LD prune` and `MAF=0.05 + LD prune` are visually the closest pair: from `K=3` onward the two curves are nearly on top of each other, with differences as small as `0.02 MB` and an average gap of about `10.48 MB` across `K=2..10`.
 
 `Runtime and peak memory across the four Chr20 settings`
 
