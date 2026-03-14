@@ -4,8 +4,8 @@ Skipping fastStructure for K=4 because dump/special_chr20_maf001_pruned/structur
 Skipping fastStructure for K=5 because dump/special_chr20_maf001_pruned/structure/structure_chr20_maf001_pruned_ALL/fS_run_K.5.meanQ already exists
 Skipping fastStructure for K=6 because dump/special_chr20_maf001_pruned/structure/structure_chr20_maf001_pruned_ALL/fS_run_K.6.meanQ already exists
 Skipping fastStructure for K=7 because dump/special_chr20_maf001_pruned/structure/structure_chr20_maf001_pruned_ALL/fS_run_K.7.meanQ already exists
-Skipping fastStructure for K=9 because dump/special_chr20_maf001_pruned/structure/structure_chr20_maf001_pruned_ALL/fS_run_K.9.meanQ already exists
 Skipping fastStructure for K=8 because dump/special_chr20_maf001_pruned/structure/structure_chr20_maf001_pruned_ALL/fS_run_K.8.meanQ already exists
+Skipping fastStructure for K=9 because dump/special_chr20_maf001_pruned/structure/structure_chr20_maf001_pruned_ALL/fS_run_K.9.meanQ already exists
 Skipping fastStructure for K=10 because dump/special_chr20_maf001_pruned/structure/structure_chr20_maf001_pruned_ALL/fS_run_K.10.meanQ already exists
 Skipping chooseK.py because dump/special_chr20_maf001_pruned/structure/best_K.txt already exists
 Pipeline complete. All files are in dump/special_chr20_maf001_pruned/structure/

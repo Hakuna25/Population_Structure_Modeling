@@ -1,58 +1,11 @@
-Running fastStructure for K=3
-Running fastStructure for K=2
-Running fastStructure for K=5
-Running fastStructure for K=4
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 2 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 4 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 5 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 3 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-Running fastStructure for K=6
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 6 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-Running fastStructure for K=7
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 7 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-Running fastStructure for K=8
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 8 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-Running fastStructure for K=9
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 9 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-Running fastStructure for K=10
-INFO: [32mRunning: /home/wjl/.local/bin/fastStructure -K 10 --input /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/common/special_chr20_maf0005_pruned_chr20.pruned --output /home/wjl/Population_Structure_Modeling/dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K --format bed --seed 43[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-INFO: [32m
-==============================
-[0m
-INFO: [32mAll 1 jobs finished successfully.[0m
-Running chooseK.py
-Model complexity that maximizes marginal likelihood = 6
-Model components used to explain structure in data = 5
+Skipping fastStructure for K=2 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.2.meanQ already exists
+Skipping fastStructure for K=3 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.3.meanQ already exists
+Skipping fastStructure for K=4 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.4.meanQ already exists
+Skipping fastStructure for K=5 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.5.meanQ already exists
+Skipping fastStructure for K=6 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.6.meanQ already exists
+Skipping fastStructure for K=7 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.7.meanQ already exists
+Skipping fastStructure for K=8 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.8.meanQ already exists
+Skipping fastStructure for K=9 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.9.meanQ already exists
+Skipping fastStructure for K=10 because dump/special_chr20_maf0005_pruned/structure/structure_chr20_maf0005_pruned_ALL/fS_run_K.10.meanQ already exists
+Skipping chooseK.py because dump/special_chr20_maf0005_pruned/structure/best_K.txt already exists
 Pipeline complete. All files are in dump/special_chr20_maf0005_pruned/structure/
