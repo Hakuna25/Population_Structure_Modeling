@@ -5,3 +5,12 @@ timestamp	method	step	K	elapsed_sec	user_cpu_sec	sys_cpu_sec	max_rss_kb	exit_cod
 2026-03-11 22:33:15	faststructure	preprocess	NA	0	0.00	0.00	3840	2	dump/structure/preprocess.log
 2026-03-11 23:45:25	faststructure	fit	all	4330	19382.49	12.75	493548	0	dump/structure/structure_threader.log
 2026-03-11 23:45:25	faststructure	K_selection	all	0	0.70	0.01	27864	1	dump/structure/best_K.txt
+2026-03-13 20:40:10	faststructure	fit	2	3132	3096.55	9.97	2635144	0	dump/structure/structure_threader_K2.log
+2026-03-13 22:11:16	faststructure	fit	3	8598	8557.66	14.53	2810232	0	dump/structure/structure_threader_K3.log
+2026-03-13 23:07:33	faststructure	fit	10	11975	11808.42	140.18	4144260	0	dump/structure/structure_threader_K10.log
+2026-03-13 23:59:42	faststructure	fit	7	15104	14930.18	154.37	3616220	0	dump/structure/structure_threader_K7.log
+2026-03-14 00:05:18	faststructure	fit	8	15440	15261.69	159.26	3811152	0	dump/structure/structure_threader_K8.log
+2026-03-14 00:09:19	faststructure	fit	6	15681	15502.86	154.00	3419796	0	dump/structure/structure_threader_K6.log
+2026-03-14 00:55:09	faststructure	fit	5	18431	18229.37	172.34	3223360	0	dump/structure/structure_threader_K5.log
+2026-03-14 02:04:50	faststructure	fit	4	22612	22582.37	9.21	3076000	0	dump/structure/structure_threader_K4.log
+2026-03-14 08:52:13	faststructure	fit	9	47055	46608.11	423.97	4002220	0	dump/structure/structure_threader_K9.log
