@@ -122,18 +122,18 @@ Each row in `metrics.tsv` contains:
 ## 📊 Results and Conclusion
 The full analysis is documented in `analysis_setting_1.ipynb` and `analysis_setting_2.ipynb`. Below is a README-sized summary of the notebook outputs.
 
-### Setting 1: all autosomes
+### Setting 1: All Autosomes
 
 On the whole-autosome dataset, both methods recover the five 1000 Genomes super-populations clearly, with fastSTRUCTURE producing visually cleaner blocks and ADMIXTURE preserving more low-level mixed ancestry signal. K-selection points to a stable range around `K=5-7` rather than one single sharp optimum. For ADMIXTURE, the CV curve has a clear elbow at `K=5`: the error drops from `0.50675` at `K=2` to `0.47627` at `K=5`, and then improves by only `0.00105` from `K=5` to `K=10`. For fastSTRUCTURE, the per-`K` marginal likelihood is best at `K=6` (`-0.86454`) and stays nearly flat for `K=5..10`; separately, `chooseK` reports `5` components needed to explain the structure in the data and `7` as the maximum model complexity. Taken together, these results support using `K=5` as the main super-population baseline while inspecting `K=4-7` for finer structure.
 
-Whole-autosome K-value exploration:
+#### Whole-autosome K-value Exploration:
 
 ![Whole-autosome CV and marginal-likelihood curves](plots/all_autosomes_cv_ml_vs_k.png)
 
-Whole-autosome population structure:
+#### Whole-autosome Population Structure:
 ![Whole-autosome ancestry panels](plots/dump_admixture_combined_membership_panels.png)
 
-Whole-autosome time and memory:
+#### Whole-autosome Runtime and Memory:
 
 | Method | Total fit time across `K=2..10` | Mean fit time per K | Peak RSS |
 | --- | ---: | ---: | ---: |
@@ -158,11 +158,11 @@ Whole-autosome time and memory:
 - As `K` increases, both methods show the same high-level continental backbone, but ADMIXTURE shows a more visible "splitter effect" and finer within-region fragmentation.
 
 
-### Setting 2: chromosome 20 quality-control sensitivity
+### Setting 2: Chromosome 20 (Chr20) Quality-Control (QC) Experiments
 
 The setting compares four QC configurations and shows that LD pruning and MAF thresholds strongly affect the computational cost while preserving the main continental structure.
 
-Chr20 population structure:
+####  Chr20 Population Structure:
 
 `MAF=0.01 + LD prune`
 
@@ -180,7 +180,7 @@ Chr20 population structure:
 
 ![Chr20 MAF=0.05 + LD prune](plots/special_chr20_maf005_pruned_admixture_combined_membership_panels.png)
 
-`K-selection curves across the four Chr20 settings`
+####  Chr20 K-value exploration Across QC Configurations:
 
 ![Chr20 CV and marginal-likelihood curves](plots/cv_ml_vs_k.png)
 
@@ -197,7 +197,7 @@ Chr20 population structure:
 - Across all four Chr20 settings, ADMIXTURE CV tends to keep decreasing slightly toward larger `K`, while fastSTRUCTURE peaks earlier and more stably at `K=5` or `K=6`, so the practical resolution remains around the same range as the whole-genome experiment.
 - In the fastSTRUCTURE memory plot, `MAF=0.01 + LD prune` and `MAF=0.05 + LD prune` are visually the closest pair: from `K=3` onward the two curves are nearly on top of each other, with differences as small as `0.02 MB` and an average gap of about `10.48 MB` across `K=2..10`.
 
-`Runtime and peak memory across the four Chr20 settings`
+#### Chr20 Runtime and Memory Across QC Configurations:
 
 ![Chr20 runtime and memory vs K](plots/runtime_memory_vs_k.png)
 
