@@ -26,7 +26,7 @@ fi
 
 if [[ -z "$ADMIXTURE_BIN" || ! -x "$ADMIXTURE_BIN" ]]; then
     echo "ERROR: admixture not found or not executable."
-    echo "Please activate your conda env (e.g., conda activate bio_tools) or set ADMIXTURE_BIN in pipeline.conf."
+    echo "Please install ADMIXTURE according to the README, then rerun the pipeline."
     exit 1
 fi
 
