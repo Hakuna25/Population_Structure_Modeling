@@ -1,1 +1,7 @@
 timestamp	method	step	K	elapsed_sec	user_cpu_sec	sys_cpu_sec	max_rss_kb	exit_code	log_file
+2026-03-11 22:17:35	faststructure	preprocess	NA	0	0.00	0.00	3840	2	dump/structure/preprocess.log
+2026-03-11 22:30:32	faststructure	fit	all	777	1040.10	1.28	335016	0	dump/structure/structure_threader.log
+2026-03-11 22:30:33	faststructure	K_selection	all	1	0.55	0.01	27904	1	dump/structure/best_K.txt
+2026-03-11 22:33:15	faststructure	preprocess	NA	0	0.00	0.00	3840	2	dump/structure/preprocess.log
+2026-03-11 23:45:25	faststructure	fit	all	4330	19382.49	12.75	493548	0	dump/structure/structure_threader.log
+2026-03-11 23:45:25	faststructure	K_selection	all	0	0.70	0.01	27864	1	dump/structure/best_K.txt
