@@ -13,12 +13,14 @@ admixture model that estimates individual ancestry proportions efficiently for l
 
 ## Installation
 ```
+# create a dedicated bcftools environment
 conda env create -f env_bcftools.yml
+
+# create main environment
 conda env create -f env.yml
 conda activate bio_tools
 pip install structure_threader --user
 
-# create a dedicated bcftools environment
 
 # install official ADMIXTURE 1.3.1 binary
 mkdir -p tools
