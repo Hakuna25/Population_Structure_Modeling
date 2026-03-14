@@ -40,7 +40,8 @@ cd ..
 ## 🚀 Quick Start (View Results)
 If you want to skip the computation and dive straight into the findings:
 
-Open `analysis.ipynb`: This notebook contains the pre-rendered experimental results, visualizations, and detailed analysis. It also includes extra experiment blocks for `no LD pruning` and `MAF=0.05`, alongside the original baseline workflow.
+- Open `analysis_setting_1.ipynb` for comparison on the main whole-genome LD-pruned.
+- Open `analysis_setting_2.ipynb` for comparison on chromosome 20 with different MAF thresholds and LD pruning strategies.
 
 ## 🧬 Data and assets
 [1000 Genomes Phase 3 Data](https://www.nature.com/articles/nature15393) is a comprehensive release of the 1000 Genomes Project dataset, providing whole-genome sequencing–based variant calls for 2,504 individuals from 26 populations across five continental groups. In this project, we focus on autosomal biallelic SNPs and use an LD-pruned version of the autosomal data.
@@ -97,12 +98,20 @@ Each row in `metrics.tsv` contains:
 - `max_rss_kb`: peak resident memory (KB)
 
 ## 🌳 Repository structure
-- `1000Genomes/`: contains the original input data, specifically the igsr_samples.tsv and the prunded VCF files.
+- `1000Genomes/`: contains the original input data, specifically `igsr_samples.tsv`, the LD-pruned VCF files, and the reference FASTA files under `reference/`.
 - `dump/`:
     - `common/`: shared outputs from `preprocess.sh`.
-    - `admixture/`: the primary workspace for Admixture. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
-    - `structure/`: the primary workspace for fastStructure. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
-- Root scripts: `preprocess.sh` builds the shared analysis input once, `admixture.sh` and `structure.sh` run the two methods, and `analysis.ipynb` is the main entry point for orchestration and results analysis.
+    - `admixture/`: the primary workspace for ADMIXTURE. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
+    - `structure/`: the primary workspace for fastSTRUCTURE. Contains all intermediate PLINK files (.bed, .bim, .fam) for chromosomes and running logs.
+    - `special_chr20_*`: chromosome 20 experiments under different MAF / LD settings.
+- Root scripts:
+    - `preprocess.sh`: builds the shared analysis input once.
+    - `admixture.sh`: runs ADMIXTURE on the shared `dump/common/common_ALL.pruned.*` dataset.
+    - `structure.sh`: runs fastSTRUCTURE on the shared `dump/common/common_ALL.pruned.*` dataset.
+    - `benchmark.sh`: aggregates runtime / memory metrics.
+- Notebooks:
+    - `analysis_setting_1.ipynb`: main whole-genome analysis.
+    - `analysis_setting_2.ipynb`: chromosome 20 sensitivity analysis.
 
 ## 📊 Current Results
 The detailed current results are shown in `analysis.ipynb`, here is a brief summary:
