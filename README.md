@@ -1,6 +1,6 @@
 # Comparing Global Ancestry Analysis Methods on 1000 Genomes Phase 3 Data
 
-Xueqian Bai, Jialin Wu, Yutong Liang
+Xueqian Bai, Jialin (Justin) Wu, Yutong Liang
 
 ## Introduction
 Global ancestry analysis is a fundamental task in population genetics, aiming to infer the ancestral origins of individuals based on their genetic data. This analysis provides insights into human migration patterns, population structure, and evolutionary history. In this project, we focus on comparing two widely used model-based methods for global ancestry analysis: [ADMIXTURE](https://genome.cshlp.org/content/19/9/1655) and [fastSTRUCTURE](https://doi.org/10.1534/genetics.114.164350). ADMIXTURE is a maximum-likelihood
@@ -93,7 +93,7 @@ Each row in `metrics.tsv` contains:
 - `method`: `admixture` or `faststructure`
 - `step`: e.g. `preprocess`, `fit`, `K_selection`
 - `K`: corresponding K value
-- `elapsed_sec`: time in seconds
+- `elapsed_sec`: runtime in seconds
 - `max_rss_kb`: peak resident memory (KB)
 
 ## 🌳 Repository structure
@@ -116,7 +116,7 @@ Each row in `metrics.tsv` contains:
 - `pipeline.conf`: central configuration for binary paths, threads, and preprocessing directories.
 - `preprocess.sh`: shared preprocessing pipeline that normalizes VCFs, builds PLINK files, LD pruning, and merges chromosomes.
 - `structure.sh`: runs fastSTRUCTURE on the shared `dump/common/common_ALL.pruned.*` dataset.
-- `utils.py`: helper utilities used by the notebooks and plotting workflow.
+- `utils.py`: helper utilities used by the notebooks for reading files and plotting.
 
 
 ## 📊 Results and Conclusion
